@@ -15,7 +15,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.19">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
     
     
       
@@ -69,6 +69,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#configurations" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -531,6 +536,139 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configurations" class="md-nav__link">
+    Configurations
+  </a>
+  
+    <nav class="md-nav" aria-label="Configurations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#helm-release-configurations" class="md-nav__link">
+    Helm release configurations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serviceaccount-configurations" class="md-nav__link">
+    ServiceAccount configurations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pod-strategies-configurations" class="md-nav__link">
+    Pod strategies configurations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image-configurations" class="md-nav__link">
+    Image configurations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logs-configurations" class="md-nav__link">
+    Logs configurations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#external-database-configurations" class="md-nav__link">
+    External database configurations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#web-server-configurations" class="md-nav__link">
+    Web server configurations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-users-configurations" class="md-nav__link">
+    Local users configurations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mailing-configurations" class="md-nav__link">
+    Mailing configurations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authentications-backends-configurations" class="md-nav__link">
+    Authentications backends configurations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autoscaling-configurations" class="md-nav__link">
+    Autoscaling configurations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#service-configurations" class="md-nav__link">
+    Service configurations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ingress-configurations" class="md-nav__link">
+    Ingress configurations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#volumes-configurations" class="md-nav__link">
+    Volumes configurations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pod-configurations" class="md-nav__link">
+    Pod configurations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resources-configurations" class="md-nav__link">
+    Resources configurations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -549,6 +687,10 @@
 
   <h1>Deployment</h1>
 
+<h2 id="configurations">Configurations</h2>
+<p>By default, Helm deployment is configured via a value file.<br />
+This file can be found in the <a href="https://github.com/FR-BEZ-AOSC/docker-znuny/blob/main/helm/values.yaml">Github repository</a>.</p>
+<h3 id="helm-release-configurations">Helm release configurations</h3>
 <table>
 <thead>
 <tr>
@@ -561,327 +703,427 @@
 <tr>
 <td align="left">nameOverride</td>
 <td align="left">{}</td>
-<td align="left"></td>
+<td align="left">Overrides the release name</td>
 </tr>
 <tr>
 <td align="left">namespaceOverride</td>
 <td align="left">{}</td>
-<td align="left"></td>
+<td align="left">Overrides the namespace name</td>
 </tr>
+</tbody>
+</table>
+<h3 id="serviceaccount-configurations">ServiceAccount configurations</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Option</th>
+<th align="left">Default</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td align="left">serviceAccount.create</td>
 <td align="left">true</td>
-<td align="left"></td>
+<td align="left">Defines whether the ServiceAccount should be created or not</td>
 </tr>
 <tr>
 <td align="left">serviceAccount.annotations</td>
 <td align="left">{}</td>
-<td align="left"></td>
+<td align="left">Defines ServiceAccount annotations</td>
 </tr>
 <tr>
 <td align="left">serviceAccount.name</td>
 <td align="left">""</td>
-<td align="left"></td>
+<td align="left">Defines the name of the ServiceAccount</td>
 </tr>
+</tbody>
+</table>
+<h3 id="pod-strategies-configurations">Pod strategies configurations</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Option</th>
+<th align="left">Default</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td align="left">imagePullSecrets</td>
 <td align="left">[]</td>
-<td align="left"></td>
+<td align="left">Defines the secrets to be used to pull the image</td>
 </tr>
 <tr>
 <td align="left">restartPolicy</td>
 <td align="left">Always</td>
-<td align="left"></td>
+<td align="left">Defines the restart policy</td>
 </tr>
 <tr>
 <td align="left">deploymentStrategy</td>
 <td align="left">Recreate</td>
-<td align="left"></td>
+<td align="left">Defines the deployment behavour</td>
 </tr>
 <tr>
 <td align="left">replicaCount</td>
 <td align="left">1</td>
-<td align="left"></td>
+<td align="left">Define the desired number of replicas</td>
 </tr>
+</tbody>
+</table>
+<h3 id="image-configurations">Image configurations</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Option</th>
+<th align="left">Default</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td align="left">image.repository</td>
 <td align="left">ghcr.io/mln-nicolas-b/docker-znuny</td>
-<td align="left"></td>
+<td align="left">Defines the name of the image to be used</td>
 </tr>
 <tr>
 <td align="left">image.tag</td>
 <td align="left">v6.5.3-1</td>
-<td align="left"></td>
+<td align="left">Defines the tag of the image to be used</td>
 </tr>
 <tr>
 <td align="left">image.pullPolicy</td>
 <td align="left">IfNotPresent</td>
-<td align="left"></td>
+<td align="left">Defines the pull policy of the image</td>
 </tr>
+</tbody>
+</table>
+<h3 id="logs-configurations">Logs configurations</h3>
+<table>
+<thead>
 <tr>
-<td align="left">config</td>
-<td align="left"></td>
-<td align="left"></td>
+<th align="left">Option</th>
+<th align="left">Default</th>
+<th align="left">Description</th>
 </tr>
+</thead>
+<tbody>
 <tr>
 <td align="left">config.logs</td>
 <td align="left">{}</td>
-<td align="left"></td>
+<td align="left">Defines whether the Znuny application should log to a file and provides the file path.</td>
 </tr>
+</tbody>
+</table>
+<h3 id="external-database-configurations">External database configurations</h3>
+<table>
+<thead>
 <tr>
-<td align="left">config.database</td>
-<td align="left"></td>
-<td align="left"></td>
+<th align="left">Option</th>
+<th align="left">Default</th>
+<th align="left">Description</th>
 </tr>
+</thead>
+<tbody>
 <tr>
 <td align="left">config.database.type</td>
 <td align="left">mysql</td>
-<td align="left"></td>
+<td align="left">Defines the type of the external database</td>
 </tr>
 <tr>
 <td align="left">config.database.host</td>
 <td align="left">host</td>
-<td align="left"></td>
+<td align="left">Defines the host of the external database</td>
 </tr>
 <tr>
 <td align="left">config.database.port</td>
 <td align="left">port</td>
-<td align="left"></td>
+<td align="left">Defines the port of the external database</td>
 </tr>
 <tr>
 <td align="left">config.database.name</td>
 <td align="left">name</td>
-<td align="left"></td>
+<td align="left">Defines the name of the external database</td>
 </tr>
 <tr>
 <td align="left">config.database.user</td>
 <td align="left">user</td>
-<td align="left"></td>
+<td align="left">Defines the connection user of the external database</td>
 </tr>
 <tr>
 <td align="left">config.database.password</td>
 <td align="left">password</td>
-<td align="left"></td>
+<td align="left">Defines the connection password of the external database</td>
 </tr>
+</tbody>
+</table>
+<h3 id="web-server-configurations">Web server configurations</h3>
+<table>
+<thead>
 <tr>
-<td align="left">config.apache</td>
-<td align="left"></td>
-<td align="left"></td>
+<th align="left">Option</th>
+<th align="left">Default</th>
+<th align="left">Description</th>
 </tr>
+</thead>
+<tbody>
 <tr>
 <td align="left">config.apache.domain</td>
 <td align="left">znuny.domain.tld</td>
-<td align="left"></td>
+<td align="left">Defines a ServerName in the virtualhost of the Apache2 server</td>
 </tr>
 <tr>
 <td align="left">config.apache.rewriteRules</td>
 <td align="left">{}</td>
-<td align="left"></td>
+<td align="left">Defines request rewriting rules in the Apache2 server virtualhost</td>
 </tr>
+</tbody>
+</table>
+<h3 id="local-users-configurations">Local users configurations</h3>
+<table>
+<thead>
 <tr>
-<td align="left">config.users</td>
-<td align="left"></td>
-<td align="left"></td>
+<th align="left">Option</th>
+<th align="left">Default</th>
+<th align="left">Description</th>
 </tr>
-<tr>
-<td align="left">config.users.admin</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
+</thead>
+<tbody>
 <tr>
 <td align="left">config.users.admin.name</td>
 <td align="left">root@localhost</td>
-<td align="left"></td>
+<td align="left">Defines the username of the local administrator user</td>
 </tr>
 <tr>
 <td align="left">config.users.admin.password</td>
 <td align="left">password</td>
-<td align="left"></td>
+<td align="left">Defines the password of the local administrator user</td>
 </tr>
+</tbody>
+</table>
+<h3 id="mailing-configurations">Mailing configurations</h3>
+<table>
+<thead>
 <tr>
-<td align="left">config.mails</td>
-<td align="left">{}</td>
-<td align="left"></td>
+<th align="left">Option</th>
+<th align="left">Default</th>
+<th align="left">Description</th>
 </tr>
+</thead>
+<tbody>
 <tr>
 <td align="left">config.mails.type</td>
 <td align="left">external</td>
-<td align="left"></td>
+<td align="left">Defines the method used to send e-mails</td>
 </tr>
 <tr>
 <td align="left">config.mails.host</td>
 <td align="left">smtp.domain.tld</td>
-<td align="left"></td>
+<td align="left">Defines the SMTP server host</td>
 </tr>
 <tr>
 <td align="left">config.mails.port</td>
 <td align="left">25</td>
-<td align="left"></td>
+<td align="left">Defines the SMTP server port</td>
 </tr>
 <tr>
 <td align="left">config.mails.user</td>
 <td align="left">znuny@domain.tld</td>
-<td align="left"></td>
+<td align="left">Defines the SMTP server user name</td>
 </tr>
 <tr>
 <td align="left">config.mails.password</td>
 <td align="left">none</td>
-<td align="left"></td>
+<td align="left">Defines the SMTP server user password</td>
 </tr>
+</tbody>
+</table>
+<h3 id="authentications-backends-configurations">Authentications backends configurations</h3>
+<table>
+<thead>
 <tr>
-<td align="left">config.authentications</td>
-<td align="left"></td>
-<td align="left"></td>
+<th align="left">Option</th>
+<th align="left">Default</th>
+<th align="left">Description</th>
 </tr>
-<tr>
-<td align="left">config.authentications.customers</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
+</thead>
+<tbody>
 <tr>
 <td align="left">config.authentications.customers.backends</td>
 <td align="left">{}</td>
-<td align="left"></td>
+<td align="left">Define an authentication backend for customer login</td>
 </tr>
 <tr>
 <td align="left">config.authentications.customers.synchronizations</td>
 <td align="left">{}</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">config.authentications.agents</td>
-<td align="left"></td>
-<td align="left"></td>
+<td align="left">Defines a synchronization backend for local client storage</td>
 </tr>
 <tr>
 <td align="left">config.authentications.agents.backends</td>
 <td align="left">{}</td>
-<td align="left"></td>
+<td align="left">Define an authentication backend for agent login</td>
 </tr>
 <tr>
 <td align="left">config.authentications.agents.synchronizations</td>
 <td align="left">{}</td>
-<td align="left"></td>
+<td align="left">Defines a synchronization backend for local client storage</td>
 </tr>
+</tbody>
+</table>
+<h3 id="autoscaling-configurations">Autoscaling configurations</h3>
+<table>
+<thead>
 <tr>
-<td align="left">config.autoscaling</td>
-<td align="left">{}</td>
-<td align="left"></td>
+<th align="left">Option</th>
+<th align="left">Default</th>
+<th align="left">Description</th>
 </tr>
+</thead>
+<tbody>
 <tr>
 <td align="left">config.autoscaling.minReplicas</td>
 <td align="left">1</td>
-<td align="left"></td>
+<td align="left">Defines the minimum number of replicas for HorizontalPodScaling</td>
 </tr>
 <tr>
 <td align="left">config.autoscaling.maxReplicas</td>
 <td align="left">3</td>
-<td align="left"></td>
+<td align="left">Defines the maximum number of replicas for HorizontalPodScaling</td>
 </tr>
 <tr>
 <td align="left">config.autoscaling.targetCPUUtilizationPercentage</td>
 <td align="left">20</td>
-<td align="left"></td>
+<td align="left">Defines the CPU threshold to trigger scaling</td>
 </tr>
 <tr>
 <td align="left">config.autoscaling.targetMemoryUtilizationPercentage</td>
 <td align="left">50</td>
-<td align="left"></td>
+<td align="left">Defines the RAM threshold to trigger scaling</td>
 </tr>
+</tbody>
+</table>
+<h3 id="service-configurations">Service configurations</h3>
+<table>
+<thead>
 <tr>
-<td align="left">config.service</td>
-<td align="left"></td>
-<td align="left"></td>
+<th align="left">Option</th>
+<th align="left">Default</th>
+<th align="left">Description</th>
 </tr>
+</thead>
+<tbody>
 <tr>
 <td align="left">config.service.type</td>
 <td align="left">ClusterIP</td>
-<td align="left"></td>
+<td align="left">Defines the type of Kubernetes service</td>
 </tr>
 <tr>
 <td align="left">config.service.port</td>
 <td align="left">80</td>
-<td align="left"></td>
+<td align="left">Defines the port of Kubernetes service</td>
 </tr>
+</tbody>
+</table>
+<h3 id="ingress-configurations">Ingress configurations</h3>
+<table>
+<thead>
 <tr>
-<td align="left">config.ingress</td>
-<td align="left"></td>
-<td align="left"></td>
+<th align="left">Option</th>
+<th align="left">Default</th>
+<th align="left">Description</th>
 </tr>
+</thead>
+<tbody>
 <tr>
 <td align="left">config.ingress.enabled</td>
 <td align="left">false</td>
-<td align="left"></td>
+<td align="left">Defines whether the Kubernetes Ingress resource should be activated or not</td>
 </tr>
 <tr>
 <td align="left">config.ingress.domain</td>
 <td align="left">znuny.domain.tld</td>
-<td align="left"></td>
+<td align="left">Defines the Ingress public domain</td>
 </tr>
 <tr>
 <td align="left">config.ingress.annotations</td>
 <td align="left">["kubernetes.io/ingress.class: nginx"]</td>
-<td align="left"></td>
+<td align="left">Defines Ingress annotations</td>
 </tr>
 <tr>
-<td align="left">config.ingress.tls</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">config.ingress.enabled</td>
+<td align="left">config.ingress.tls.enabled</td>
 <td align="left">true</td>
-<td align="left"></td>
+<td align="left">Defines whether TLS should be enabled on Ingress or not</td>
 </tr>
 <tr>
-<td align="left">config.ingress.annotations</td>
+<td align="left">config.ingress.tls.annotations</td>
 <td align="left">["cert-manager.io/cluster-issuer: letsencrypt-prod"]</td>
-<td align="left"></td>
+<td align="left">Defines annotations for ingress TLS functionalities</td>
 </tr>
+</tbody>
+</table>
+<h3 id="volumes-configurations">Volumes configurations</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Option</th>
+<th align="left">Default</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td align="left">config.persistentVolumeClaims</td>
 <td align="left">[]</td>
-<td align="left"></td>
+<td align="left">Defines persistent volumes, their names, their mounting</td>
 </tr>
+</tbody>
+</table>
+<h3 id="pod-configurations">Pod configurations</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Option</th>
+<th align="left">Default</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td align="left">config.podAnnotations</td>
 <td align="left">[]</td>
-<td align="left"></td>
+<td align="left">Defines pod annotations</td>
 </tr>
+</tbody>
+</table>
+<h3 id="resources-configurations">Resources configurations</h3>
+<table>
+<thead>
 <tr>
-<td align="left">config.resources</td>
-<td align="left"></td>
-<td align="left"></td>
+<th align="left">Option</th>
+<th align="left">Default</th>
+<th align="left">Description</th>
 </tr>
-<tr>
-<td align="left">config.resources.limits</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
+</thead>
+<tbody>
 <tr>
 <td align="left">config.resources.limits.cpu</td>
 <td align="left">100m</td>
-<td align="left"></td>
+<td align="left">Defines the pod CPU limit resources</td>
 </tr>
 <tr>
 <td align="left">config.resources.limits.memory</td>
 <td align="left">128Mi</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">config.resources.requests</td>
-<td align="left"></td>
-<td align="left"></td>
+<td align="left">Defines the pod RAM limit resources</td>
 </tr>
 <tr>
 <td align="left">config.resources.requests.cpu</td>
 <td align="left">100m</td>
-<td align="left"></td>
+<td align="left">Defines the pod CPU request resources</td>
 </tr>
 <tr>
 <td align="left">config.resources.requests.memory</td>
 <td align="left">128Mi</td>
-<td align="left"></td>
+<td align="left">Defines the pod RAM request resources</td>
 </tr>
 </tbody>
 </table>
@@ -891,7 +1133,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 4, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 17, 2023</span>
       
     
   </small>

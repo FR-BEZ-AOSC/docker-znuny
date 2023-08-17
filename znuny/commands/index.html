@@ -15,7 +15,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.19">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
     
     
       
@@ -601,13 +601,34 @@
 <h2 id="global-commands">Global commands</h2>
 <p>The are many main commands which can be run :</p>
 <ul>
-<li><code>config</code>: <em>Manage the configuration of znuny</em></li>
-<li><code>check</code>: <em>Check some features or resources</em></li>
+<li><code>config</code>: <em>Manage the configuration of znuny</em><ul>
+<li><code>apache</code>: <em>Create virtualhosts</em></li>
+<li><code>crons</code>: <em>Create all crons</em></li>
+<li><code>customers</code>: <em>Create customers authentications</em></li>
+<li><code>database</code>: <em>Initialize the database</em></li>
+<li><code>operators</code>: <em>Create operators authentications</em></li>
+<li><code>znuny</code>: <em>Create the main configuration file of Znuny</em></li>
+</ul>
+</li>
+<li><code>check</code>: <em>Check some features or resources</em><ul>
+<li><code>modules</code>: <em>Check Perl modules</em></li>
+<li><code>config</code>: <em>Check the built configuration in database</em></li>
+</ul>
+</li>
 <li><code>download</code>: <em>Download the znuny archive</em></li>
 <li><code>init</code>: <em>Initialize the container</em></li>
-<li><code>migration</code>: <em>Migrate an existing database from any source to the application database</em></li>
-<li><code>run</code>: <em>Run Znuny</em></li>
-<li><code>user</code>: <em>Manage users</em></li>
+<li><code>run</code>: <em>Run Znuny</em><ul>
+<li><code>cron</code>: <em>Run the crons of Znuny</em></li>
+<li><code>daemon</code>: <em>Run the daemon of Znuny</em></li>
+<li><code>znuny</code>: <em>Run Znuny</em></li>
+</ul>
+</li>
+<li><code>user</code>: <em>Manage users</em><ul>
+<li><code>admin</code>: <em>Create the admin user</em></li>
+<li><code>permissions</code>: <em>Set the user permissions</em></li>
+<li><code>system</code>: <em>Create the system user</em></li>
+</ul>
+</li>
 </ul>
 <h2 id="global-options">Global options</h2>
 <ul>
@@ -641,158 +662,9 @@ All features supported can be set with environment variables.  </p>
 </ul>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>The environment variables ended by <code>_X</code> are variable which can be repeated.<br />
-The charater <code>X</code> need to be replace by a number between 1 and 9.<br />
-The use of other number will be ignored.</p>
-</div>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">compose/znuny.yaml</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
-<span class="normal">58</span>
-<span class="normal">59</span>
-<span class="normal">60</span>
-<span class="normal">61</span>
-<span class="normal">62</span>
-<span class="normal">63</span>
-<span class="normal">64</span>
-<span class="normal">65</span>
-<span class="normal">66</span>
-<span class="normal">67</span>
-<span class="normal">68</span>
-<span class="normal">69</span>
-<span class="normal">70</span>
-<span class="normal">71</span>
-<span class="normal">72</span>
-<span class="normal">73</span>
-<span class="normal">74</span>
-<span class="normal">75</span>
-<span class="normal">76</span>
-<span class="normal">77</span>
-<span class="normal">78</span>
-<span class="normal">79</span>
-<span class="normal">80</span>
-<span class="normal">81</span>
-<span class="normal">82</span>
-<span class="normal">83</span>
-<span class="normal">84</span>
-<span class="normal">85</span>
-<span class="normal">86</span>
-<span class="normal">87</span>
-<span class="normal">88</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">  </span><span class="nt">environment</span><span class="p">:</span>
-<span class="hll"><span class="w">    </span><span class="nt">ZNUNY_LOG_PATH</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/var/log/znuny</span>
-</span>
-<span class="hll"><span class="w">    </span><span class="nt">ZNUNY_DATABASE_TYPE</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pgsql</span>
-</span><span class="hll"><span class="w">    </span><span class="nt">ZNUNY_DATABASE_HOST</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgresql</span>
-</span><span class="hll"><span class="w">    </span><span class="nt">ZNUNY_DATABASE_PORT</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5432</span>
-</span><span class="hll"><span class="w">    </span><span class="nt">ZNUNY_DATABASE_NAME</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">znuny</span>
-</span><span class="hll"><span class="w">    </span><span class="nt">ZNUNY_DATABASE_USER</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">znuny</span>
-</span><span class="hll"><span class="w">    </span><span class="nt">ZNUNY_DATABASE_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">password</span>
-</span>
-<span class="hll"><span class="w">    </span><span class="nt">ZNUNY_APACHE_DOMAIN</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">znuny.domain.tld</span>
-</span><span class="hll"><span class="w">    </span><span class="nt">ZNUNY_APACHE_REWRITE_RULES</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|-</span>
-</span><span class="w">      </span><span class="no">RewriteRule ^/$ https://%{HTTP_HOST}/otrs/customer.pl</span>
-<span class="w">      </span><span class="no">RewriteRule ^/otrs/$ https://%{HTTP_HOST}/otrs/customer.pl</span>
-<span class="w">      </span><span class="no">RewriteRule ^/otrs$ https://%{HTTP_HOST}/otrs/customer.pl</span>
-
-<span class="hll"><span class="w">    </span><span class="nt">ZNUNY_USER_ADMIN_NAME</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root@localhost</span>
-</span><span class="hll"><span class="w">    </span><span class="nt">ZNUNY_USER_ADMIN_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">password</span>
-</span>
-<span class="hll"><span class="w">    </span><span class="nt">ZNUNY_MAILING_TYPE</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">external</span>
-</span><span class="hll"><span class="w">    </span><span class="nt">ZNUNY_MAILING_HOST</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">smpt.domain.tld</span>
-</span><span class="hll"><span class="w">    </span><span class="nt">ZNUNY_MAILING_PORT</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">25</span>
-</span><span class="hll"><span class="w">    </span><span class="nt">ZNUNY_MAILING_USER</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">znuny</span>
-</span><span class="hll"><span class="w">    </span><span class="nt">ZNUNY_MAILING_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">password</span>
-</span>
-<span class="hll"><span class="w">    </span><span class="nt">ZNUNY_CUSTOMER_BACKEND_1</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|-</span>
-</span><span class="w">      </span><span class="no">$$Self-&gt;{AuthModule} = &#39;Kernel::System::Auth::LDAP&#39;;</span>
-<span class="w">      </span><span class="no">$$Self-&gt;{&#39;AuthModule::LDAP::Host&#39;} = &#39;ldap.example.com&#39;;</span>
-<span class="w">      </span><span class="no">$$Self-&gt;{&#39;AuthModule::LDAP::BaseDN&#39;} = &#39;dc=example,dc=com&#39;;</span>
-<span class="w">      </span><span class="no">$$Self-&gt;{&#39;AuthModule::LDAP::UID&#39;} = &#39;uid&#39;;</span>
-<span class="w">      </span><span class="no">$$Self-&gt;{&#39;AuthModule::LDAP::GroupDN&#39;} = &#39;cn=znuny-allow,ou=posixGroups,dc=example,dc=com&#39;;</span>
-<span class="w">      </span><span class="no">$$Self-&gt;{&#39;AuthModule::LDAP::AccessAttr&#39;} = &#39;memberUid&#39;;</span>
-<span class="w">      </span><span class="no">$$Self-&gt;{&#39;AuthModule::LDAP::UserAttr&#39;} = &#39;UID&#39;;</span>
-<span class="w">      </span><span class="no">$$Self-&gt;{&#39;AuthModule::LDAP::UserAttr&#39;} = &#39;DN&#39;;</span>
-<span class="hll"><span class="w">    </span><span class="nt">ZNUNY_CUSTOMER_SYNCHRO_1</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|-</span>
-</span><span class="w">      </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule&#39;} = &#39;Kernel::System::Auth::Sync::LDAP&#39;;</span>
-<span class="w">      </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule::LDAP::Host&#39;} = &#39;ldap.example.com&#39;;</span>
-<span class="w">      </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule::LDAP::BaseDN&#39;} = &#39;dc=example,dc=com&#39;;</span>
-<span class="w">      </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule::LDAP::UID&#39;} = &#39;uid&#39;;</span>
-<span class="w">      </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule::LDAP::SearchUserDN&#39;} = &#39;&#39;;</span>
-<span class="w">      </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule::LDAP::SearchUserPw&#39;} = &#39;&#39;;</span>
-<span class="w">      </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule::LDAP::AlwaysFilter&#39;} = &#39;&#39;;</span>
-<span class="w">      </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule::LDAP::UserSyncMap&#39;} = {</span>
-<span class="w">          </span><span class="no">UserFirstname =&gt; &#39;givenName&#39;,</span>
-<span class="w">          </span><span class="no">UserLastname  =&gt; &#39;sn&#39;,</span>
-<span class="w">          </span><span class="no">UserEmail     =&gt; &#39;mail&#39;,</span>
-<span class="w">      </span><span class="no">};</span>
-
-<span class="hll"><span class="w">    </span><span class="nt">ZNUNY_AGENT_BACKEND_1</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|-</span>
-</span><span class="w">      </span><span class="no">$$Self-&gt;{AuthModule} = &#39;Kernel::System::Auth::LDAP&#39;;</span>
-<span class="w">      </span><span class="no">$$Self-&gt;{&#39;AuthModule::LDAP::Host&#39;} = &#39;ldap.example.com&#39;;</span>
-<span class="w">      </span><span class="no">$$Self-&gt;{&#39;AuthModule::LDAP::BaseDN&#39;} = &#39;dc=example,dc=com&#39;;</span>
-<span class="w">      </span><span class="no">$$Self-&gt;{&#39;AuthModule::LDAP::UID&#39;} = &#39;uid&#39;;</span>
-<span class="w">      </span><span class="no">$$Self-&gt;{&#39;AuthModule::LDAP::GroupDN&#39;} = &#39;cn=znuny-allow,ou=posixGroups,dc=example,dc=com&#39;;</span>
-<span class="w">      </span><span class="no">$$Self-&gt;{&#39;AuthModule::LDAP::AccessAttr&#39;} = &#39;memberUid&#39;;</span>
-<span class="w">      </span><span class="no">$$Self-&gt;{&#39;AuthModule::LDAP::UserAttr&#39;} = &#39;UID&#39;;</span>
-<span class="w">      </span><span class="no">$$Self-&gt;{&#39;AuthModule::LDAP::UserAttr&#39;} = &#39;DN&#39;;</span>
-<span class="hll"><span class="w">    </span><span class="nt">ZNUNY_AGENT_SYNCHRO_1</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|-</span>
-</span><span class="w">      </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule&#39;} = &#39;Kernel::System::Auth::Sync::LDAP&#39;;</span>
-<span class="w">      </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule::LDAP::Host&#39;} = &#39;ldap.example.com&#39;;</span>
-<span class="w">      </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule::LDAP::BaseDN&#39;} = &#39;dc=example,dc=com&#39;;</span>
-<span class="w">      </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule::LDAP::UID&#39;} = &#39;uid&#39;;</span>
-<span class="w">      </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule::LDAP::SearchUserDN&#39;} = &#39;&#39;;</span>
-<span class="w">      </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule::LDAP::SearchUserPw&#39;} = &#39;&#39;;</span>
-<span class="w">      </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule::LDAP::AlwaysFilter&#39;} = &#39;&#39;;</span>
-<span class="w">      </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule::LDAP::UserSyncMap&#39;} = {</span>
-<span class="w">          </span><span class="no">UserFirstname =&gt; &#39;givenName&#39;,</span>
-<span class="w">          </span><span class="no">UserLastname  =&gt; &#39;sn&#39;,</span>
-<span class="w">          </span><span class="no">UserEmail     =&gt; &#39;mail&#39;,</span>
-<span class="w">      </span><span class="no">};</span>
-
-<span class="hll"><span class="w">    </span><span class="nt">ZNUNY_CUSTOM_PLUGINS</span><span class="p">:</span>
-</span><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">plugins</span>
-</code></pre></div></td></tr></table></div>
+<p>Environment variables ending in <code>_X</code> are repeatable variables and are therefore suffixed with a number.<br />
+The <code>X</code> character must be replaced by a number between 1 and 9, allowing multiple LDAP connection backends to be configured.</p>
+<p>Use of any other number will be ignored.</p>
 </div>
 
   <hr>
@@ -800,7 +672,7 @@ The use of other number will be ignored.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 4, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 17, 2023</span>
       
     
   </small>

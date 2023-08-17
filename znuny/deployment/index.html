@@ -15,7 +15,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.19">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
     
     
       
@@ -69,6 +69,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#required-configurations" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -531,6 +536,28 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#required-configurations" class="md-nav__link">
+    Required configurations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optional-configurations" class="md-nav__link">
+    Optional configurations
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -549,85 +576,17 @@
 
   <h1>Deployment</h1>
 
-<div class="tabbed-set tabbed-alternate" data-tabs="1:8"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><input id="__tabbed_1_6" name="__tabbed_1" type="radio" /><input id="__tabbed_1_7" name="__tabbed_1" type="radio" /><input id="__tabbed_1_8" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Minimal</label><label for="__tabbed_1_2">Mails</label><label for="__tabbed_1_3">Logs</label><label for="__tabbed_1_4">Apache</label><label for="__tabbed_1_5">User</label><label for="__tabbed_1_6">Plugins</label><label for="__tabbed_1_7">Customers</label><label for="__tabbed_1_8">Agents</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">docker-compose.yaml</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nn">---</span>
-<span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3&quot;</span>
-
-<span class="nt">services</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">znuny</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ghcr.io/mln-nicolas-b/docker-znuny:6.5.3-1</span>
-<span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">znuny</span>
-<span class="w">    </span><span class="nt">hostname</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">znuny</span>
-<span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">ZNUNY_DATABASE_TYPE</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mysql</span>
-<span class="w">      </span><span class="nt">ZNUNY_DATABASE_HOST</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mariadb</span>
-<span class="w">      </span><span class="nt">ZNUNY_DATABASE_PORT</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3306</span>
-<span class="w">      </span><span class="nt">ZNUNY_DATABASE_NAME</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">znuny</span>
-<span class="w">      </span><span class="nt">ZNUNY_DATABASE_USER</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">znuny</span>
-<span class="w">      </span><span class="nt">ZNUNY_DATABASE_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">password</span>
-</code></pre></div></td></tr></table></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">docker-compose.yaml</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nn">---</span>
-<span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3&quot;</span>
-
-<span class="nt">services</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">znuny</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ghcr.io/mln-nicolas-b/docker-znuny:6.5.3-1</span>
-<span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">znuny</span>
-<span class="w">    </span><span class="nt">hostname</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">znuny</span>
-<span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">ZNUNY_DATABASE_TYPE</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mysql</span>
-<span class="w">      </span><span class="nt">ZNUNY_DATABASE_HOST</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mariadb</span>
-<span class="w">      </span><span class="nt">ZNUNY_DATABASE_PORT</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3306</span>
-<span class="w">      </span><span class="nt">ZNUNY_DATABASE_NAME</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">znuny</span>
-<span class="w">      </span><span class="nt">ZNUNY_DATABASE_USER</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">znuny</span>
-<span class="w">      </span><span class="nt">ZNUNY_DATABASE_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">password</span>
-
-<span class="w">      </span><span class="nt">ZNUNY_MAILING_TYPE</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">external</span>
-<span class="w">      </span><span class="nt">ZNUNY_MAILING_HOST</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">smpt.domain.tld</span>
-<span class="w">      </span><span class="nt">ZNUNY_MAILING_PORT</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">25</span>
-<span class="w">      </span><span class="nt">ZNUNY_MAILING_USER</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">znuny</span>
-<span class="w">      </span><span class="nt">ZNUNY_MAILING_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">password</span>
-</code></pre></div></td></tr></table></div>
-</div>
-<div class="tabbed-block">
+<h2 id="required-configurations">Required configurations</h2>
+<p>Not all features are active by default, and therefore don't necessarily need to be configured.</p>
+<p>Others, on the other hand, do require configuration during deployment.</p>
+<p>These features are as follows:</p>
+<ul>
+<li>Database configuration</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>The most basic deployment should include an image and the environment variables for the database connection.</p>
+<p>If necessary, add configuration elements such as port forwarding, container name, hostname, etc.</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">docker-compose.yaml</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -649,9 +608,64 @@
 
 <span class="nt">services</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">znuny</span><span class="p">:</span>
+<span class="hll"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ghcr.io/mln-nicolas-b/docker-znuny:6.5.3-1</span>
+</span><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">znuny</span>
+<span class="w">    </span><span class="nt">hostname</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">znuny</span>
+<span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080:80</span>
+<span class="hll"><span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+</span><span class="hll"><span class="w">      </span><span class="nt">ZNUNY_DATABASE_TYPE</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mysql</span>
+</span><span class="hll"><span class="w">      </span><span class="nt">ZNUNY_DATABASE_HOST</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mariadb</span>
+</span><span class="hll"><span class="w">      </span><span class="nt">ZNUNY_DATABASE_PORT</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3306</span>
+</span><span class="hll"><span class="w">      </span><span class="nt">ZNUNY_DATABASE_NAME</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">znuny</span>
+</span><span class="hll"><span class="w">      </span><span class="nt">ZNUNY_DATABASE_USER</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">znuny</span>
+</span><span class="hll"><span class="w">      </span><span class="nt">ZNUNY_DATABASE_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">password</span>
+</span></code></pre></div></td></tr></table></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The <code>ZNUNY_DATABASE_TYPE</code> variable is extremely important, as it determines which database manager is used on the backend, 
+and therefore which type of client is used on the application side to connect to it.<br />
+The variable must be set to <code>mysql</code> for a <strong>MariaDB</strong> or <strong>MySQL</strong> database, or <code>pgsql</code> for a <strong>PostgreSQL</strong> database.</p>
+</div>
+<h2 id="optional-configurations">Optional configurations</h2>
+<p>Deployment of the containerized application is fully configurable via environment variables.</p>
+<p>Each feature therefore has a variable capable of enabling or disabling it, and customizing its configuration.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:6"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><input id="__tabbed_1_6" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Mails</label><label for="__tabbed_1_2">Logs</label><label for="__tabbed_1_3">Apache</label><label for="__tabbed_1_4">User</label><label for="__tabbed_1_5">Customers</label><label for="__tabbed_1_6">Agents</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">docker-compose.yaml</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nn">---</span>
+<span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3&quot;</span>
+
+<span class="nt">services</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">znuny</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ghcr.io/mln-nicolas-b/docker-znuny:6.5.3-1</span>
 <span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">znuny</span>
 <span class="w">    </span><span class="nt">hostname</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">znuny</span>
+<span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080:80</span>
 <span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ZNUNY_DATABASE_TYPE</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mysql</span>
 <span class="w">      </span><span class="nt">ZNUNY_DATABASE_HOST</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mariadb</span>
@@ -660,8 +674,67 @@
 <span class="w">      </span><span class="nt">ZNUNY_DATABASE_USER</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">znuny</span>
 <span class="w">      </span><span class="nt">ZNUNY_DATABASE_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">password</span>
 
-<span class="w">      </span><span class="nt">ZNUNY_LOG_PATH</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/var/log/znuny</span>
-</code></pre></div></td></tr></table></div>
+<span class="hll"><span class="w">      </span><span class="nt">ZNUNY_MAILING_TYPE</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">external</span>
+</span><span class="hll"><span class="w">      </span><span class="nt">ZNUNY_MAILING_HOST</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">smpt.domain.tld</span>
+</span><span class="hll"><span class="w">      </span><span class="nt">ZNUNY_MAILING_PORT</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">25</span>
+</span><span class="hll"><span class="w">      </span><span class="nt">ZNUNY_MAILING_USER</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">znuny</span>
+</span><span class="hll"><span class="w">      </span><span class="nt">ZNUNY_MAILING_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">password</span>
+</span></code></pre></div></td></tr></table></div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>To enable mail sending via an external server, the <code>ZNUNY_MAILING_TYPE</code> variable must be set to <code>external</code>.<br />
+Otherwise, this variable will be set to <code>internal</code> and all other <code>ZNUNY_MAILING_XXX</code> mail configuration variables will be ignored when configuring the application.</p>
+</div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">docker-compose.yaml</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nn">---</span>
+<span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3&quot;</span>
+
+<span class="nt">services</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">znuny</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ghcr.io/mln-nicolas-b/docker-znuny:6.5.3-1</span>
+<span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">znuny</span>
+<span class="w">    </span><span class="nt">hostname</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">znuny</span>
+<span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080:80</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">ZNUNY_DATABASE_TYPE</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mysql</span>
+<span class="w">      </span><span class="nt">ZNUNY_DATABASE_HOST</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mariadb</span>
+<span class="w">      </span><span class="nt">ZNUNY_DATABASE_PORT</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3306</span>
+<span class="w">      </span><span class="nt">ZNUNY_DATABASE_NAME</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">znuny</span>
+<span class="w">      </span><span class="nt">ZNUNY_DATABASE_USER</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">znuny</span>
+<span class="w">      </span><span class="nt">ZNUNY_DATABASE_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">password</span>
+
+<span class="hll"><span class="w">      </span><span class="nt">ZNUNY_LOG_PATH</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/var/log/znuny</span>
+</span></code></pre></div></td></tr></table></div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>By default, the <strong>Znuny</strong> application uses <strong>Rsyslog</strong> to manage its logging.<br />
+However, with this method, the amount of logging is often low or non-existent.<br />
+The <code>ZNUNY_LOG_PATH</code> variable allows you to dispense with <strong>Rsyslog</strong> for log management. 
+The application will simply write to a single log file, whose path can be customized.</p>
+<p>The <strong>Znuny</strong> application does not write all its activity in its log files.<br />
+Only actions performed via the application's command line are logged.<br />
+Daemon and cron logs are output directly in the standard <em>json</em> container output.</p>
+</div>
 </div>
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">docker-compose.yaml</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -684,7 +757,9 @@
 <span class="normal">18</span>
 <span class="normal">19</span>
 <span class="normal">20</span>
-<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nn">---</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nn">---</span>
 <span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3&quot;</span>
 
 <span class="nt">services</span><span class="p">:</span>
@@ -692,6 +767,8 @@
 <span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ghcr.io/mln-nicolas-b/docker-znuny:6.5.3-1</span>
 <span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">znuny</span>
 <span class="w">    </span><span class="nt">hostname</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">znuny</span>
+<span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080:80</span>
 <span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ZNUNY_DATABASE_TYPE</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mysql</span>
 <span class="w">      </span><span class="nt">ZNUNY_DATABASE_HOST</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mariadb</span>
@@ -700,12 +777,20 @@
 <span class="w">      </span><span class="nt">ZNUNY_DATABASE_USER</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">znuny</span>
 <span class="w">      </span><span class="nt">ZNUNY_DATABASE_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">password</span>
 
-<span class="w">      </span><span class="nt">ZNUNY_APACHE_DOMAIN</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">znuny.domain.tld</span>
-<span class="w">      </span><span class="nt">ZNUNY_APACHE_REWRITE_RULES</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|-</span>
-<span class="w">        </span><span class="no">RewriteRule ^/$ https://%{HTTP_HOST}/otrs/customer.pl</span>
-<span class="w">        </span><span class="no">RewriteRule ^/otrs/$ https://%{HTTP_HOST}/otrs/customer.pl</span>
-<span class="w">        </span><span class="no">RewriteRule ^/otrs$ https://%{HTTP_HOST}/otrs/customer.pl</span>
-</code></pre></div></td></tr></table></div>
+<span class="hll"><span class="w">      </span><span class="nt">ZNUNY_APACHE_DOMAIN</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">znuny.domain.tld</span>
+</span><span class="hll"><span class="w">      </span><span class="nt">ZNUNY_APACHE_REWRITE_RULES</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|-</span>
+</span><span class="hll"><span class="w">        </span><span class="no">RewriteRule ^/$ https://%{HTTP_HOST}/otrs/customer.pl</span>
+</span><span class="hll"><span class="w">        </span><span class="no">RewriteRule ^/otrs/$ https://%{HTTP_HOST}/otrs/customer.pl</span>
+</span><span class="hll"><span class="w">        </span><span class="no">RewriteRule ^/otrs$ https://%{HTTP_HOST}/otrs/customer.pl</span>
+</span></code></pre></div></td></tr></table></div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>If required, you can set up a web domain for the virtualhost of the Apache2 server.<br />
+This can be especially useful if you want to have a record of it in the server logs.<br />
+If no domain is specified, then the Apache2 server will be configured with a "default" 
+value for the virtualhost's ServerNmae option.</p>
+<p>If required, you can also configure request rewriting rules directly in the virtualhost configuration.</p>
+</div>
 </div>
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">docker-compose.yaml</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -725,7 +810,9 @@
 <span class="normal">15</span>
 <span class="normal">16</span>
 <span class="normal">17</span>
-<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nn">---</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nn">---</span>
 <span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3&quot;</span>
 
 <span class="nt">services</span><span class="p">:</span>
@@ -733,6 +820,8 @@
 <span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ghcr.io/mln-nicolas-b/docker-znuny:6.5.3-1</span>
 <span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">znuny</span>
 <span class="w">    </span><span class="nt">hostname</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">znuny</span>
+<span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080:80</span>
 <span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ZNUNY_DATABASE_TYPE</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mysql</span>
 <span class="w">      </span><span class="nt">ZNUNY_DATABASE_HOST</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mariadb</span>
@@ -741,47 +830,14 @@
 <span class="w">      </span><span class="nt">ZNUNY_DATABASE_USER</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">znuny</span>
 <span class="w">      </span><span class="nt">ZNUNY_DATABASE_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">password</span>
 
-<span class="w">      </span><span class="nt">ZNUNY_USER_ADMIN_NAME</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root@localhost</span>
-<span class="w">      </span><span class="nt">ZNUNY_USER_ADMIN_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">password</span>
-</code></pre></div></td></tr></table></div>
+<span class="hll"><span class="w">      </span><span class="nt">ZNUNY_USER_ADMIN_NAME</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root@localhost</span>
+</span><span class="hll"><span class="w">      </span><span class="nt">ZNUNY_USER_ADMIN_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">password</span>
+</span></code></pre></div></td></tr></table></div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Local administrator user configuration only works if LDAP agent configurations are not specified.<br />
+If agent LDAP configurations are defined, those of the local administrator user become obsolete.</p>
 </div>
-<div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">docker-compose.yaml</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nn">---</span>
-<span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3&quot;</span>
-
-<span class="nt">services</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">znuny</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ghcr.io/mln-nicolas-b/docker-znuny:6.5.3-1</span>
-<span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">znuny</span>
-<span class="w">    </span><span class="nt">hostname</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">znuny</span>
-<span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">ZNUNY_DATABASE_TYPE</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mysql</span>
-<span class="w">      </span><span class="nt">ZNUNY_DATABASE_HOST</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mariadb</span>
-<span class="w">      </span><span class="nt">ZNUNY_DATABASE_PORT</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3306</span>
-<span class="w">      </span><span class="nt">ZNUNY_DATABASE_NAME</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">znuny</span>
-<span class="w">      </span><span class="nt">ZNUNY_DATABASE_USER</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">znuny</span>
-<span class="w">      </span><span class="nt">ZNUNY_DATABASE_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">password</span>
-
-<span class="w">      </span><span class="nt">ZNUNY_CUSTOM_PLUGINS</span><span class="p">:</span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">plugin</span>
-</code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">docker-compose.yaml</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -821,7 +877,9 @@
 <span class="normal">35</span>
 <span class="normal">36</span>
 <span class="normal">37</span>
-<span class="normal">38</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nn">---</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nn">---</span>
 <span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3&quot;</span>
 
 <span class="nt">services</span><span class="p">:</span>
@@ -829,6 +887,8 @@
 <span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ghcr.io/mln-nicolas-b/docker-znuny:6.5.3-1</span>
 <span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">znuny</span>
 <span class="w">    </span><span class="nt">hostname</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">znuny</span>
+<span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080:80</span>
 <span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ZNUNY_DATABASE_TYPE</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mysql</span>
 <span class="w">      </span><span class="nt">ZNUNY_DATABASE_HOST</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mariadb</span>
@@ -837,29 +897,36 @@
 <span class="w">      </span><span class="nt">ZNUNY_DATABASE_USER</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">znuny</span>
 <span class="w">      </span><span class="nt">ZNUNY_DATABASE_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">password</span>
 
-<span class="w">      </span><span class="nt">ZNUNY_CUSTOMER_BACKEND_1</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|-</span>
-<span class="w">        </span><span class="no">$$Self-&gt;{AuthModule} = &#39;Kernel::System::Auth::LDAP&#39;;</span>
-<span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthModule::LDAP::Host&#39;} = &#39;ldap.example.com&#39;;</span>
-<span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthModule::LDAP::BaseDN&#39;} = &#39;dc=example,dc=com&#39;;</span>
-<span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthModule::LDAP::UID&#39;} = &#39;uid&#39;;</span>
-<span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthModule::LDAP::GroupDN&#39;} = &#39;cn=znuny-allow,ou=posixGroups,dc=example,dc=com&#39;;</span>
-<span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthModule::LDAP::AccessAttr&#39;} = &#39;memberUid&#39;;</span>
-<span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthModule::LDAP::UserAttr&#39;} = &#39;UID&#39;;</span>
-<span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthModule::LDAP::UserAttr&#39;} = &#39;DN&#39;;</span>
-<span class="w">      </span><span class="nt">ZNUNY_CUSTOMER_SYNCHRO_1</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|-</span>
-<span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule&#39;} = &#39;Kernel::System::Auth::Sync::LDAP&#39;;</span>
-<span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule::LDAP::Host&#39;} = &#39;ldap.example.com&#39;;</span>
-<span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule::LDAP::BaseDN&#39;} = &#39;dc=example,dc=com&#39;;</span>
-<span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule::LDAP::UID&#39;} = &#39;uid&#39;;</span>
-<span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule::LDAP::SearchUserDN&#39;} = &#39;&#39;;</span>
-<span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule::LDAP::SearchUserPw&#39;} = &#39;&#39;;</span>
-<span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule::LDAP::AlwaysFilter&#39;} = &#39;&#39;;</span>
-<span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule::LDAP::UserSyncMap&#39;} = {</span>
-<span class="w">            </span><span class="no">UserFirstname =&gt; &#39;givenName&#39;,</span>
-<span class="w">            </span><span class="no">UserLastname  =&gt; &#39;sn&#39;,</span>
-<span class="w">            </span><span class="no">UserEmail     =&gt; &#39;mail&#39;,</span>
-<span class="w">        </span><span class="no">};</span>
-</code></pre></div></td></tr></table></div>
+<span class="hll"><span class="w">      </span><span class="nt">ZNUNY_CUSTOMER_BACKEND_1</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|-</span>
+</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{AuthModule} = &#39;Kernel::System::Auth::LDAP&#39;;</span>
+</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthModule::LDAP::Host&#39;} = &#39;ldap.example.com&#39;;</span>
+</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthModule::LDAP::BaseDN&#39;} = &#39;dc=example,dc=com&#39;;</span>
+</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthModule::LDAP::UID&#39;} = &#39;uid&#39;;</span>
+</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthModule::LDAP::GroupDN&#39;} = &#39;cn=znuny-allow,ou=posixGroups,dc=example,dc=com&#39;;</span>
+</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthModule::LDAP::AccessAttr&#39;} = &#39;memberUid&#39;;</span>
+</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthModule::LDAP::UserAttr&#39;} = &#39;UID&#39;;</span>
+</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthModule::LDAP::UserAttr&#39;} = &#39;DN&#39;;</span>
+</span><span class="hll"><span class="w">      </span><span class="nt">ZNUNY_CUSTOMER_SYNCHRO_1</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|-</span>
+</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule&#39;} = &#39;Kernel::System::Auth::Sync::LDAP&#39;;</span>
+</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule::LDAP::Host&#39;} = &#39;ldap.example.com&#39;;</span>
+</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule::LDAP::BaseDN&#39;} = &#39;dc=example,dc=com&#39;;</span>
+</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule::LDAP::UID&#39;} = &#39;uid&#39;;</span>
+</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule::LDAP::SearchUserDN&#39;} = &#39;&#39;;</span>
+</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule::LDAP::SearchUserPw&#39;} = &#39;&#39;;</span>
+</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule::LDAP::AlwaysFilter&#39;} = &#39;&#39;;</span>
+</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule::LDAP::UserSyncMap&#39;} = {</span>
+</span><span class="hll"><span class="w">            </span><span class="no">UserFirstname =&gt; &#39;givenName&#39;,</span>
+</span><span class="hll"><span class="w">            </span><span class="no">UserLastname  =&gt; &#39;sn&#39;,</span>
+</span><span class="hll"><span class="w">            </span><span class="no">UserEmail     =&gt; &#39;mail&#39;,</span>
+</span><span class="hll"><span class="w">        </span><span class="no">};</span>
+</span></code></pre></div></td></tr></table></div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>This step is almost mandatory to keep user management simple and efficient.</p>
+<p>Environment variables ending in <code>_X</code> are repeatable variables and are therefore suffixed with a number.<br />
+The <code>X</code> character must be replaced by a number between 1 and 9, allowing multiple LDAP connection backends to be configured.</p>
+<p>Use of any other number will be ignored.</p>
+</div>
 </div>
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">docker-compose.yaml</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -899,7 +966,9 @@
 <span class="normal">35</span>
 <span class="normal">36</span>
 <span class="normal">37</span>
-<span class="normal">38</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nn">---</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nn">---</span>
 <span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3&quot;</span>
 
 <span class="nt">services</span><span class="p">:</span>
@@ -907,6 +976,8 @@
 <span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ghcr.io/mln-nicolas-b/docker-znuny:6.5.3-1</span>
 <span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">znuny</span>
 <span class="w">    </span><span class="nt">hostname</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">znuny</span>
+<span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080:80</span>
 <span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ZNUNY_DATABASE_TYPE</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mysql</span>
 <span class="w">      </span><span class="nt">ZNUNY_DATABASE_HOST</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mariadb</span>
@@ -915,29 +986,37 @@
 <span class="w">      </span><span class="nt">ZNUNY_DATABASE_USER</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">znuny</span>
 <span class="w">      </span><span class="nt">ZNUNY_DATABASE_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">password</span>
 
-<span class="w">      </span><span class="nt">ZNUNY_AGENT_BACKEND_1</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|-</span>
-<span class="w">        </span><span class="no">$$Self-&gt;{AuthModule} = &#39;Kernel::System::Auth::LDAP&#39;;</span>
-<span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthModule::LDAP::Host&#39;} = &#39;ldap.example.com&#39;;</span>
-<span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthModule::LDAP::BaseDN&#39;} = &#39;dc=example,dc=com&#39;;</span>
-<span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthModule::LDAP::UID&#39;} = &#39;uid&#39;;</span>
-<span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthModule::LDAP::GroupDN&#39;} = &#39;cn=znuny-allow,ou=posixGroups,dc=example,dc=com&#39;;</span>
-<span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthModule::LDAP::AccessAttr&#39;} = &#39;memberUid&#39;;</span>
-<span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthModule::LDAP::UserAttr&#39;} = &#39;UID&#39;;</span>
-<span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthModule::LDAP::UserAttr&#39;} = &#39;DN&#39;;</span>
-<span class="w">      </span><span class="nt">ZNUNY_AGENT_SYNCHRO_1</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|-</span>
-<span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule&#39;} = &#39;Kernel::System::Auth::Sync::LDAP&#39;;</span>
-<span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule::LDAP::Host&#39;} = &#39;ldap.example.com&#39;;</span>
-<span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule::LDAP::BaseDN&#39;} = &#39;dc=example,dc=com&#39;;</span>
-<span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule::LDAP::UID&#39;} = &#39;uid&#39;;</span>
-<span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule::LDAP::SearchUserDN&#39;} = &#39;&#39;;</span>
-<span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule::LDAP::SearchUserPw&#39;} = &#39;&#39;;</span>
-<span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule::LDAP::AlwaysFilter&#39;} = &#39;&#39;;</span>
-<span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule::LDAP::UserSyncMap&#39;} = {</span>
-<span class="w">            </span><span class="no">UserFirstname =&gt; &#39;givenName&#39;,</span>
-<span class="w">            </span><span class="no">UserLastname  =&gt; &#39;sn&#39;,</span>
-<span class="w">            </span><span class="no">UserEmail     =&gt; &#39;mail&#39;,</span>
-<span class="w">        </span><span class="no">};</span>
-</code></pre></div></td></tr></table></div>
+<span class="hll"><span class="w">      </span><span class="nt">ZNUNY_AGENT_BACKEND_1</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|-</span>
+</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{AuthModule} = &#39;Kernel::System::Auth::LDAP&#39;;</span>
+</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthModule::LDAP::Host&#39;} = &#39;ldap.example.com&#39;;</span>
+</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthModule::LDAP::BaseDN&#39;} = &#39;dc=example,dc=com&#39;;</span>
+</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthModule::LDAP::UID&#39;} = &#39;uid&#39;;</span>
+</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthModule::LDAP::GroupDN&#39;} = &#39;cn=znuny-allow,ou=posixGroups,dc=example,dc=com&#39;;</span>
+</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthModule::LDAP::AccessAttr&#39;} = &#39;memberUid&#39;;</span>
+</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthModule::LDAP::UserAttr&#39;} = &#39;UID&#39;;</span>
+</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthModule::LDAP::UserAttr&#39;} = &#39;DN&#39;;</span>
+</span><span class="hll"><span class="w">      </span><span class="nt">ZNUNY_AGENT_SYNCHRO_1</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|-</span>
+</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule&#39;} = &#39;Kernel::System::Auth::Sync::LDAP&#39;;</span>
+</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule::LDAP::Host&#39;} = &#39;ldap.example.com&#39;;</span>
+</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule::LDAP::BaseDN&#39;} = &#39;dc=example,dc=com&#39;;</span>
+</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule::LDAP::UID&#39;} = &#39;uid&#39;;</span>
+</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule::LDAP::SearchUserDN&#39;} = &#39;&#39;;</span>
+</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule::LDAP::SearchUserPw&#39;} = &#39;&#39;;</span>
+</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule::LDAP::AlwaysFilter&#39;} = &#39;&#39;;</span>
+</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule::LDAP::UserSyncMap&#39;} = {</span>
+</span><span class="hll"><span class="w">            </span><span class="no">UserFirstname =&gt; &#39;givenName&#39;,</span>
+</span><span class="hll"><span class="w">            </span><span class="no">UserLastname  =&gt; &#39;sn&#39;,</span>
+</span><span class="hll"><span class="w">            </span><span class="no">UserEmail     =&gt; &#39;mail&#39;,</span>
+</span><span class="hll"><span class="w">        </span><span class="no">};</span>
+</span></code></pre></div></td></tr></table></div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>This step is almost mandatory to keep operator management simple and efficient.</p>
+<p>LDAP configuration for agents disables local users.</p>
+<p>Environment variables ending in <code>_X</code> are repeatable variables and are therefore suffixed with a number.<br />
+The <code>X</code> character must be replaced by a number between 1 and 9, allowing multiple LDAP connection backends to be configured.</p>
+<p>Use of any other number will be ignored.</p>
+</div>
 </div>
 </div>
 </div>
@@ -947,7 +1026,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 4, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 17, 2023</span>
       
     
   </small>

@@ -15,7 +15,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.19">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
     
     
       
@@ -556,6 +556,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#templating" class="md-nav__link">
+    Templating
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -670,13 +677,17 @@ Ensure to add it at the local name resolution in the file <strong><em>/etc/hosts
 <p>Delete cluster :</p>
 <div class="highlight"><pre><span></span><code>k3d<span class="w"> </span>cluster<span class="w"> </span>delete<span class="w"> </span>znuny-dev-cluster
 </code></pre></div>
+<h2 id="templating">Templating</h2>
+<p>Create templates to check compliance of deployed resources from the project root :</p>
+<div class="highlight"><pre><span></span><code>helm<span class="w"> </span>template<span class="w"> </span>znuny<span class="w"> </span>./helm
+</code></pre></div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 4, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 17, 2023</span>
       
     
   </small>
