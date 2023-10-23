@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://znuny.aosc-portal.com/helm/development/">
+        <link rel="canonical" href="https://docker-znuny.aosc-portal.com/helm/development/">
       
       
       
@@ -735,41 +735,41 @@
 <span class="normal">32</span>
 <span class="normal">33</span>
 <span class="normal">34</span>
-<span class="normal">35</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">k3d.io/v1alpha5</span>
+<span class="normal">35</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nn">---</span>
+<span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">k3d.io/v1alpha5</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Simple</span>
 <span class="nt">metadata</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">znuny-dev-cluster</span>
 <span class="nt">servers</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
 <span class="nt">agents</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
-<span class="nt">kubeAPI</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;znuny.domain.tld&quot;</span>
-<span class="w">  </span><span class="nt">hostIP</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;127.0.0.1&quot;</span>
-<span class="w">  </span><span class="nt">hostPort</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;7777&quot;</span>
-<span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rancher/k3s:v1.26.6-k3s1</span>
-<span class="nt">token</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">znunuySecretToken</span>
-<span class="nt">subnet</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;172.30.0.0/16&quot;</span>
+<span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">docker.io/rancher/k3s:v1.27.4-k3s1</span>
 <span class="nt">ports</span><span class="p">:</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080:80</span>
 <span class="w">    </span><span class="nt">nodeFilters</span><span class="p">:</span>
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">loadbalancer</span>
-<span class="nt">options</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">k3d</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">wait</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<span class="w">    </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;60s&quot;</span>
-<span class="w">    </span><span class="nt">disableLoadbalancer</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
-<span class="w">    </span><span class="nt">disableImageVolume</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
-<span class="w">    </span><span class="nt">disableRollback</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
-<span class="w">    </span><span class="nt">loadbalancer</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">configOverrides</span><span class="p">:</span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">settings.workerConnections=2048</span>
-<span class="w">  </span><span class="nt">k3s</span><span class="p">:</span><span class="w"> </span><span class="c1"># options passed on to K3s itself</span>
-<span class="w">    </span><span class="nt">extraArgs</span><span class="p">:</span><span class="w"> </span><span class="c1"># additional arguments passed to the `k3s server|agent` command; same as `--k3s-arg`</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">arg</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;--tls-san=znuny.domain.tld&quot;</span>
-<span class="w">        </span><span class="nt">nodeFilters</span><span class="p">:</span>
-<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">server:*</span>
-<span class="w">  </span><span class="nt">kubeconfig</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">updateDefaultKubeconfig</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<span class="w">    </span><span class="nt">switchCurrentContext</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="c1"># kubeAPI:</span>
+<span class="c1">#   host: &quot;znuny.domain.tld&quot;</span>
+<span class="c1">#   hostIP: &quot;127.0.0.1&quot;</span>
+<span class="c1">#   hostPort: &quot;7777&quot;</span>
+<span class="c1"># subnet: &quot;172.24.0.0/16&quot;</span>
+<span class="c1"># options:</span>
+<span class="c1">#   k3d:</span>
+<span class="c1">#     wait: true</span>
+<span class="c1">#     timeout: &quot;60s&quot;</span>
+<span class="c1">#     disableLoadbalancer: false</span>
+<span class="c1">#     disableImageVolume: false</span>
+<span class="c1">#     disableRollback: false</span>
+<span class="c1">#     loadbalancer:</span>
+<span class="c1">#       configOverrides:</span>
+<span class="c1">#         - settings.workerConnections=2048</span>
+<span class="c1">#   k3s: # options passed on to K3s itself</span>
+<span class="c1">#     extraArgs: # additional arguments passed to the `k3s server|agent` command; same as `--k3s-arg`</span>
+<span class="c1">#       - arg: &quot;--tls-san=znuny.domain.tld&quot;</span>
+<span class="c1">#         nodeFilters:</span>
+<span class="c1">#           - server:*</span>
+<span class="c1">#   kubeconfig:</span>
+<span class="c1">#     updateDefaultKubeconfig: true</span>
+<span class="c1">#     switchCurrentContext: true</span>
 </code></pre></div></td></tr></table></div>
 <p>The default domain used by the development cluster is <strong>znuny-dev-cluster</strong>.<br />
 Ensure to add it at the local name resolution in the file <strong><em>/etc/hosts</em></strong> :</p>
