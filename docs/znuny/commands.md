@@ -32,6 +32,9 @@ The are many main commands which can be run :
     * `admin`: *Create the admin user*
     * `permissions`: *Set the user permissions*
     * `system`: *Create the system user*
+* `upgrade`: *Upgrade database to current version*
+    * `shell`: *Upgrade database directly*
+    * `job`: *Download current version, then upgrade database*
 
 ## Global options
 

@@ -223,6 +223,12 @@ commands:
 
   - name: upgrade
     help: Manage Upgrades operations
+    expose: true
+    commands:
+      - name: shell
+        help: Upgrade database
+      - name: job
+        help: Download znuny then upgrade database
 
   - name: user
     help: Manage users
