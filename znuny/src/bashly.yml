@@ -145,77 +145,51 @@ commands:
         required: true
         help: Checksum signature of the Znuny release
 
-
   - name: init
     help: Initialize the container
 
-  - name: migration
-    help: Migrate an existing database from any source to the application database
+  - name: job
+    help: Commands for kubernetes job
     expose: true
     commands:
-      - name: database
-        help: Migrate an existing database from a working server
-        args:
-          - name: type
-            required: true
-            allowed:
-              - pgsql
-              - mysql
-            help: The database type
-        flags:
-          - short: -h
-            arg: host
-            required: true
-            help: The database host
-          - short: -p
-            arg: port
-            required: true
-            help: The database port
-          - short: -n
-            arg: name
-            required: true
-            help: The database name
-          - short: -u
-            arg: user
-            required: true
-            help: The database user
-          - short: -w
-            arg: password
-            required: true
-            help: The database password
-      - name: s3
-        help: Migrate an existing database from a dump file in an object storage
-        flags:
-          - short: -b
-            arg: bucket
-            required: true
-            help: The S3 bucket
-          - short: -h
-            arg: host
-            required: true
-            help: The access host
-          - short: -i
-            arg: identity
-            required: true
-            help: The access identity
-          - short: -o
-            arg: object
-            required: true
-            help: The object path
-          - short: -t
-            arg: token
-            required: true
-            help: The access token
-      - name: local
-        help: Migrate an existing database from a dump file on the local filesystem
-        args:
-          - name: path
-            required: true
-            help: Path of the dump file
-        flags:
-          - short: -f
-            arg: force
-            required: false
+      - name: upgrade
+        help: Upgrade database schemas
+      - name: migration
+        help: Migrate an existing database from a PostgreSQL server to the application database
+        commands:
+          - name: database
+            help: Migrate an existing database from a working server
+            flags:
+              - short: -h
+                arg: host
+                required: true
+                help: The database host
+              - short: -p
+                arg: port
+                required: true
+                help: The database port
+              - short: -n
+                arg: name
+                required: true
+                help: The database name
+              - short: -u
+                arg: user
+                required: true
+                help: The database user
+              - short: -w
+                arg: password
+                required: true
+                help: The database password
+          - name: local
+            help: Migrate an existing database from a dump file on the local filesystem
+            args:
+              - name: path
+                required: true
+                help: Path of the dump file
+            flags:
+              - short: -f
+                arg: force
+                required: false
 
   - name: run
     help: Run Znuny
@@ -228,14 +202,12 @@ commands:
       - name: znuny
         help: Run Znuny
 
-  - name: upgrade
-    help: Manage Upgrades operations
+  - name: shell
+    help: Commands for TTY shell
     expose: true
     commands:
-      - name: shell
+      - name: upgrade
         help: Upgrade database
-      - name: job
-        help: Download znuny then upgrade database
 
   - name: user
     help: Manage users
