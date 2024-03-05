@@ -15,6 +15,6 @@ function customLogger() {
   MESSAGE=${3}
 
   cat << EOF
-{"timestamp":"${TIMESTAMP}", "level":"${LEVEL}", "source":"${SOURCE}", "message":"${MESSAGE}"}
+{"timestamp":"${TIMESTAMP}", "source":"${SOURCE}", "message":"${MESSAGE}"}
 EOF
 }
