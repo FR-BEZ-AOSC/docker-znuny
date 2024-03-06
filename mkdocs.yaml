@@ -17,7 +17,7 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/FR-BEZ-AOSC
     - icon: fontawesome/brands/docker
-      link: https://github.com/FR-BEZ-AOSC/docker-znuny/pkgs/container/docker-znuny
+      link: https://github.com/FR-BEZ-AOSC/docker-znuny/pkgs/container/znuny
 
 nav:
   - Overview: index.md
@@ -32,7 +32,8 @@ nav:
     - Parameters: helm/parameters
     - Development: helm/development
   - Kubernetes:
-    - Migration: kubernetes/migration.md
+    - Upgrade: kubernetes/upgrade
+    - Migration: kubernetes/migration
 
 markdown_extensions:
   - abbr

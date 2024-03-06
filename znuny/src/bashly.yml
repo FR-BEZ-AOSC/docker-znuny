@@ -109,7 +109,6 @@ environment_variables:
 commands:
   - name: config
     help: Manage the configuration of znuny
-    expose: true
     commands:
       - name: apache
         help: Create virtualhosts
@@ -126,7 +125,6 @@ commands:
 
   - name: check
     help: Check some features or resources
-    expose: true
     commands:
       - name: modules
         help: Check Perl modules
@@ -150,7 +148,6 @@ commands:
 
   - name: job
     help: Commands for kubernetes job
-    expose: true
     commands:
       - name: upgrade
         help: Upgrade database schemas
@@ -193,7 +190,6 @@ commands:
 
   - name: run
     help: Run Znuny
-    expose: true
     commands:
       - name: cron
         help: Run the crons of Znuny
@@ -204,14 +200,12 @@ commands:
 
   - name: shell
     help: Commands for TTY shell
-    expose: true
     commands:
       - name: upgrade
         help: Upgrade database
 
   - name: user
     help: Manage users
-    expose: true
     commands:
       - name: admin
         help: Create the admin user

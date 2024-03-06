@@ -5,7 +5,7 @@ useradd -d /opt/otrs -c 'Znuny user' -g www-data -s /bin/bash -M -N ${APP_USER} 
   for ((i = 0; i < 3; i++)); do
     if IFS= read -r MESSAGE; then
       if [[ -n "${MESSAGE}" ]]; then
-        echo -e "{\"timestamp\":\"$(date +'%Y-%m-%d %H:%M:%S')\", \"level\":\"info\", \"source\":\"znuny\", \"message\":\"${MESSAGE}\"}"
+        echo -e "{\"timestamp\":\"$(date +'%Y-%m-%d %H:%M:%S')\", \"source\":\"znuny\", \"message\":\"${MESSAGE}\"}"
       fi
     fi
     sleep 1

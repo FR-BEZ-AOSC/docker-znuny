@@ -3,7 +3,7 @@ su -c "/opt/otrs/bin/otrs.Console.pl Admin::User::SetPassword ${ZNUNY_USER_ADMIN
   while true; do
     if IFS= read -r MESSAGE; then
       if [[ -n "${MESSAGE}" ]]; then
-        echo -e "{\"timestamp\":\"$(date +'%Y-%m-%d %H:%M:%S')\", \"level\":\"info\", \"source\":\"znuny\", \"message\":\"${MESSAGE}\"}"
+        echo -e "{\"timestamp\":\"$(date +'%Y-%m-%d %H:%M:%S')\", \"source\":\"znuny\", \"message\":\"${MESSAGE}\"}"
       fi
     fi
   done &
