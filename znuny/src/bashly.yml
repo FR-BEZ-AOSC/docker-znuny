@@ -1,12 +1,10 @@
 name: zcli
-help: Simple cli to manage the container of znuny
-version: 6.1.1
+help: Simple cli to manage Znuny's applicative container
+version: 6.1.1-0
 
 environment_variables:
   - name: ZNUNY_LOG_PATH
     help: The log file path
-  - name: ZNUNY_DATABASE_TYPE
-    help: The database type (mysql, pgsql)
   - name: ZNUNY_DATABASE_HOST
     help: The database host
   - name: ZNUNY_DATABASE_NAME

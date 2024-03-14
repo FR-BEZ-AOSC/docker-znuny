@@ -1,3 +1,29 @@
+!!! warning ""
+    Znuny must be at least in version 6.0.x
+
+## Upgrade the depoyment
+
+To upgrade Znuny's deployment, simply deploy a new charts version :
+
+```bash
+helm upgrade znuny aosc/znuny \
+  --namespace aosc \
+  --version 0.1.1 \
+  --reuse-values
+```
+
+If needed, set the image tag to deploy a specific container image :
+
+```bash
+helm upgrade znuny aosc/znuny \
+  --namespace aosc \
+  --version 0.1.1 \
+  --set image.tag=<tag> \
+  --reuse-values
+```
+
+## Upgrade the database schemas
+
 Create the job manifest file "./job.upgrade.yaml" using the following as an example :
 
 ```yaml
@@ -46,7 +72,7 @@ Restart the instance :
 
 ```bash
 kubectl patch deployment znuny \
-  -n testcharts \
+  -n demo \
   -p '{"spec": {"replicas": 1}}'
 ```
 
@@ -54,6 +80,6 @@ If desired, delete the upgrade job :
 
 ```bash
 kubectl delete \
-  -n testcharts \
+  -n demo \
   -f ./tests/job.upgrade.yaml
 ```

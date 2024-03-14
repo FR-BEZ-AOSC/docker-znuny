@@ -64,7 +64,7 @@ Then elevate the privileges of the user used by the application to ensure error-
 kubectl run postgresql-client \
   --rm -tty --stdin \ 
   --restart='Never' \
-  --namespace testcharts \
+  --namespace demo \
   --image docker.io/bitnami/postgresql:16 \
   --env="PGPASSWORD=$POSTGRES_ADMIN_PASSWORD" \
   --command -- psql \
@@ -108,7 +108,8 @@ Install the Helm release :
 
 ```bash
 helm install znuny aosc/znuny \
-  --namespace aosc \
+  --namespace demo \
+  --version 0.1.1
   --values ./values.znuny.yaml
 ```
 

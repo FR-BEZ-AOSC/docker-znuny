@@ -5,12 +5,9 @@ site_description: Deploy simply and quickly a reliable and performant ticketing 
 repo_url: https://github.com/FR-BEZ-AOSC/docker-znuny
 repo_name: FR-BEZ-AOSC/docker-znuny
 
-copyright: Copyright &copy; 2022 - 2023 Eviden Open Source Center
+copyright: Copyright &copy; 2023 - 2024 Eviden Open Source Center
 
 extra:
-  version:
-    provider: mike
-    default: stable
   social:
     - icon: fontawesome/brands/readme
       link: https://doc.znuny.org/znuny_lts
@@ -20,20 +17,56 @@ extra:
       link: https://github.com/FR-BEZ-AOSC/docker-znuny/pkgs/container/znuny
 
 nav:
-  - Overview: index.md
-  - Znuny:
-    - Overview: znuny/overview
-    - Deployment: znuny/deployment
-    - Commands: znuny/commands
-    - Development: znuny/development
-  - Helm:
-    - Overview: helm/overview
-    - Installation: helm/installation
-    - Parameters: helm/parameters
-    - Development: helm/development
-  - Kubernetes:
-    - Upgrade: kubernetes/upgrade
-    - Migration: kubernetes/migration
+  - Overviews:
+    - General: index.md
+    - Docker Znuny: overviews/docker-znuny.md
+    - Helm Charts: overviews/helm-charts.md
+  - Docker Znuny:
+    - v6.1.1:
+      - Commands: docker-znuny/v6.1.1/commands.md
+      - Deployment: docker-znuny/v6.1.1/deployment.md
+      - Environment: docker-znuny/v6.1.1/environment.md
+  - Helm Charts:
+    - v0.1.1:
+      - Installation: helm-charts/v0.1.1/installation.md
+      - Parameters: helm-charts/v0.1.1/parameters.md
+      - Upgrade: helm-charts/v0.1.1/upgrade.md
+      - Migration: helm-charts/v0.1.1/migration.md
+  - Development:
+    - Docker Znuny: development/docker-znuny.md
+    - Helm Charts: development/helm-charts.md
+
+theme:
+  # logo: assets/znuny-logo.jpeg
+  name: material
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.path
+    - navigation.tracking
+    - navigation.top
+    - content.code.copy
+    - toc.follow
+    - search.suggest
+    - search.highlight
+  palette:
+    - scheme: default
+      primary: orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to dark mode
+    - scheme: slate
+      primary: deep orange
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to light mode
+  shortcuts:
+    help: 191    # ?
+    next: 78     # n
+    previous: 80 # p
+    search: 83   # s
 
 markdown_extensions:
   - abbr
@@ -54,47 +87,12 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.tilde
   - pymdownx.betterem
-  - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji 
-      emoji_generator: !!python/name:materialx.emoji.to_svg
-  - pymdownx.tasklist:
-      custom_checkbox: true
-  - pymdownx.arithmatex:
-      generic: true
+  - pymdownx.emoji
+  - pymdownx.tasklist
+  - pymdownx.arithmatex
   - pymdownx.highlight
-  - pymdownx.tabbed:
-      alternate_style: true
-    # anchor_linenums: true
-    # line_spans: __span
-    # pygments_lang_class: true
-
-theme:
-  # logo: assets/znuny-logo.jpeg
-  name: material
-  icon:
-    repo: fontawesome/brands/github
-  palette:
-    - scheme: default
-      primary: orange
-      toggle:
-        icon: material/brightness-4
-        name: Switch to dark mode
-    - scheme: slate
-      primary: deep orange
-      toggle:
-        icon: material/brightness-7 
-        name: Switch to light mode
-  features:
-    - content.code.copy
-    - content.tabs.link 
-    - navigation.expand
-  shortcuts:
-    help: 191    # ?
-    next: 78     # n
-    previous: 80 # p
-    search: 83   # s
+  - pymdownx.tabbed
 
 plugins:
-  - mike
   - search
   - git-revision-date-localized

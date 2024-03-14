@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - name: zcli
-          image: ghcr.io/fr-bez-aosc/znuny:beta-6.1.1
+          image: ghcr.io/fr-bez-aosc/znuny:<tag>
           envFrom:
           - configMapRef:
               name: znuny-config
@@ -31,7 +31,7 @@ spec:
             - "-n"
             - "znuny"                                   # The name of the remote database
             - "-u"
-            - "znuny"                                    # The user used for the remote connection
+            - "znuny"                                   # The user used for the remote connection
             - "-w"
             - "password"                                # The user's password used for the remote connection
       restartPolicy: Never

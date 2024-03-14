@@ -32,9 +32,11 @@ The are many main commands which can be run :
     * `admin`: *Create the admin user*
     * `permissions`: *Set the user permissions*
     * `system`: *Create the system user*
-* `upgrade`: *Upgrade database to current version*
-    * `shell`: *Upgrade database directly*
-    * `job`: *Download current version, then upgrade database*
+* `job`: *Commands for kubernetes job*
+    * `upgrade`: *Upgrade database schemas*
+    * `migration`: *Migrate an existing database from a PostgreSQL server to the application database*
+* `shell`: *Commands for TTY shell*
+    * `upgrade`: *Upgrade database schemas*
 
 ## Global options
 
@@ -49,7 +51,6 @@ All features supported can be set with environment variables.
 Environement variables availables :
 
 * `ZNUNY_LOG_PATH`: *The log file path*
-* `ZNUNY_DATABASE_TYPE`: *The database type (mysql, pgsql)*
 * `ZNUNY_DATABASE_HOST`: *The database host*
 * `ZNUNY_DATABASE_NAME`: *The database name*
 * `ZNUNY_DATABASE_USER`: *The database user*
