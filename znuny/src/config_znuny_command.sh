@@ -28,14 +28,7 @@ customLogger "info" "config_znuny" "Generate database connection"
 gen_add_database_credentials "${ZNUNY_DATABASE_HOST}" "${ZNUNY_DATABASE_NAME}" "${ZNUNY_DATABASE_USER}" "${ZNUNY_DATABASE_PASSWORD}"
 
 customLogger "info" "config_znuny" "Generate the database driver"
-case ${ZNUNY_DATABASE_TYPE} in
-  "mysql")
-    gen_add_database_mysql
-    ;;
-  "pgsql")
-    gen_add_database_postgresql
-    ;;
-esac
+gen_add_database_postgresql
 
 customLogger "info" "config_znuny" "Generate the filesystem root directory"
 gen_add_fs_root_dir

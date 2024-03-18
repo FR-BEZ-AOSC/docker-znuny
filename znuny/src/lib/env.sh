@@ -40,24 +40,26 @@ function set_env_mailing() {
 
   if [[ ${ZNUNY_MAILING_TYPE} == "external" ]]; then
     if [[ -z ${ZNUNY_MAILING_HOST} ]]; then
-      customLogger "error" "env" "Failed to load the environment variable ZNUNY_MAILING_HOST"
+      customLogger "error" "env" "The mailing type is set to 'external' but the environment variable ZNUNY_MAILING_HOST is missing"
       exit 1
     fi
 
     if [[ -z ${ZNUNY_MAILING_PORT} ]]; then
-      customLogger "error" "env" "Failed to load the environment variable ZNUNY_MAILING_PORT "
+      customLogger "error" "env" "The mailing type is set to 'external' but the environment variable ZNUNY_MAILING_PORT is missing"
       exit 1
     fi
 
     if [[ -z ${ZNUNY_MAILING_USER} ]]; then
-      customLogger "error" "env" "Failed to load the environment variable ZNUNY_MAILING_USER "
+      customLogger "error" "env" "The mailing type is set to 'external' but the environment variable ZNUNY_MAILING_USER is missing"
       exit 1
     fi
 
     if [[ -z ${ZNUNY_MAILING_PASSWORD} ]]; then
-      customLogger "error" "env" "Failed to load the environment variable ZNUNY_MAILING_PASSWORD"
+      customLogger "error" "env" "The mailing type is set to 'external' but the environment variable ZNUNY_MAILING_PASSWORD is missing"
       exit 1
     fi
   fi
 }
+
+
 

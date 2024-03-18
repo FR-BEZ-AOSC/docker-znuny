@@ -1,7 +1,7 @@
 APACHE_CONFIG_PATH="/etc/apache2/apache2.conf"
 
 function gen_add_apache2_main_conf() {
-  DOMAIN=${1-_default_}
+  DOMAIN=${1}
   CONTENT=$(cat << EOF > ${APACHE_CONFIG_PATH}
 ServerName ${DOMAIN}
 DefaultRuntimeDir \${APACHE_RUN_DIR}

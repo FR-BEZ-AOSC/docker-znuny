@@ -1,3 +1,5 @@
+zcli locales
+
 zcli user system
 
 zcli config znuny
@@ -10,10 +12,12 @@ zcli user permissions
 
 zcli config database
 
+zcli user admin
+
 zcli check modules
 
 zcli check config
 
-zcli user admin
+zcli upgrade
 
 zcli run znuny

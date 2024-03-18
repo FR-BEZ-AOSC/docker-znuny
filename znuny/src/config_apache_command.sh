@@ -1,6 +1,5 @@
-set_env_znuny
-
-gen_add_apache2_main_conf "${ZNUNY_APACHE_DOMAIN}"
+DEFAULT_ZNUNY_APACHE_DOMAIN="_default_"
+gen_add_apache2_main_conf "${ZNUNY_APACHE_DOMAIN:-$DEFAULT_ZNUNY_APACHE_DOMAIN}"
 
 customLogger "info" "config_apache" "Create the virtualhost to expose Znuny"
 ln -s /opt/otrs/scripts/apache2-httpd.include.conf /etc/apache2/conf-available/zzz_znuny.conf || true

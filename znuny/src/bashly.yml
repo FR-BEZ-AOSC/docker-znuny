@@ -186,6 +186,9 @@ commands:
                 arg: force
                 required: false
 
+  - name: locales
+    help: Set locales
+
   - name: run
     help: Run Znuny
     commands:
@@ -201,6 +204,9 @@ commands:
     commands:
       - name: upgrade
         help: Upgrade database
+
+  - name: upgrade
+    help: Ensure Znuny is up to date
 
   - name: user
     help: Manage users
