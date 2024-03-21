@@ -1,7 +1,6 @@
 FROM ruby:alpine AS builder
 
-#ARG ZNUNY_VERSION=6.1.1
-ARG ZNUNY_VERSION=6.2.1
+ARG ZNUNY_VERSION=6.1.1
 
 RUN gem install bashly
 
@@ -15,11 +14,8 @@ FROM debian:stable-slim
 
 LABEL org.opencontainers.image.source = "https://github.com/FR-BEZ-AOSC/docker-znuny"
 
-#ARG ZNUNY_VERSION=6.1.1
-#ARG ZNUNY_CHECKSUM=16ef499abaffdfa7405c8b38b3ee7c03
-
-ARG ZNUNY_VERSION=6.2.1
-ARG ZNUNY_CHECKSUM=ecd02cf4739ff240211cf262584687aa
+ARG ZNUNY_VERSION=6.1.1
+ARG ZNUNY_CHECKSUM=16ef499abaffdfa7405c8b38b3ee7c03
 
 WORKDIR /opt/otrs
 
