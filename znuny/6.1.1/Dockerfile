@@ -4,7 +4,7 @@ ARG ZNUNY_VERSION=6.1.1
 
 RUN gem install bashly
 
-COPY ./znuny/ /tmp
+COPY ./znuny/${ZNUNY_VERSION}/ /tmp
 
 WORKDIR /tmp/
 
