@@ -39,9 +39,15 @@ jobs:
         with:
           images: ${{ env.REGISTRY }}/${{ env.ORGANIZATION }}/${{ env.IMAGE_NAME }}
 
-      - name: Extract tag name
+      - name: Extract the tag name
         id: extract-tag
         run: echo "GIT_TAG=${GITHUB_REF/refs\/tags\//}" >> $GITHUB_ENV
+
+      - name: Extract the tag release from file
+        id: extract-release-from-file
+        run: |
+          RELEASE=$(<znuny/${GITHUB_REF/refs\/tags\//}/release)
+          echo "RELEASE=$RELEASE" >> $GITHUB_ENV
 
       - name: Build and push Docker image
         id: build-and-push-tag
@@ -51,7 +57,7 @@ jobs:
           file: ./znuny/Dockerfile
           push: true
           tags: |
-            ${{ env.REGISTRY }}/${{ env.ORGANIZATION }}/${{ env.IMAGE_NAME }}:${{ env.GIT_TAG }}
+            ${{ env.REGISTRY }}/${{ env.ORGANIZATION }}/${{ env.IMAGE_NAME }}:${{ env.GIT_TAG }}-${{ env.RELEASE }}
           labels: |
             ${{ steps.meta.outputs.labels }}
             ${{ github.ref }}

@@ -9,33 +9,35 @@ volumes:
 
 services:
   app:
-    image: ghcr.io/fr-bez-aosc/znuny:latest
+    image: ghcr.io/fr-bez-aosc/znuny:beta-6.1.1
     container_name: znuny
+    environment:
+      ZNUNY_DATABASE_HOST: postgresql
+      ZNUNY_DATABASE_PORT: 5432
+      ZNUNY_DATABASE_NAME: znuny
+      ZNUNY_DATABASE_USER: znuny
+      ZNUNY_DATABASE_PASSWORD: password
     networks:
       - net
     ports:
       - 8080:80
     depends_on:
       - db
-    environment:
-      ZNUNY_DATABASE_TYPE: pgsql
-      ZNUNY_DATABASE_HOST: postgresql
-      ZNUNY_DATABASE_PORT: 5432
-      ZNUNY_DATABASE_NAME: znuny
-      ZNUNY_DATABASE_USER: znuny
-      ZNUNY_DATABASE_PASSWORD: password
   db:
-    image: postgres:13
+    image: bitnami/postgresql:16
     container_name: postgresql
-    networks:
-      - net
-    volumes:
-      - pgsql:/var/lib/postgresql/data/pgdata
+    user: root
     environment:
-      PGDATA: /var/lib/postgresql/data/pgdata
       POSTGRES_DB: znuny
       POSTGRES_USER: znuny
       POSTGRES_PASSWORD: password
+      POSTGRESQL_POSTGRES_PASSWORD: password
+    volumes:
+      - pgsql:/bitnami/postgresql/data
+    networks:
+      - net
+    ports:
+      - 5432:5432
   ldap:
     image: bitnami/openldap:2
     container_name: openldap
