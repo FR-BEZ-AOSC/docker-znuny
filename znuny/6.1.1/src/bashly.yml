@@ -185,12 +185,9 @@ commands:
               - short: -f
                 arg: force
                 required: false
-<<<<<<< HEAD:znuny/6.1.1/src/bashly.yml
 
   - name: locales
     help: Set locales
-=======
->>>>>>> main:znuny/src/bashly.yml
 
   - name: run
     help: Run Znuny
@@ -207,12 +204,9 @@ commands:
     commands:
       - name: upgrade
         help: Upgrade database
-<<<<<<< HEAD:znuny/6.1.1/src/bashly.yml
 
   - name: upgrade
     help: Ensure Znuny is up to date
-=======
->>>>>>> main:znuny/src/bashly.yml
 
   - name: user
     help: Manage users
