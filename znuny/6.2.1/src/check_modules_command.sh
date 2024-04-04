@@ -8,7 +8,7 @@ function check_modules_perl() {
 }
 
 function check_mmodules_packages() {
-  su -c "/opt/otrs/bin/otrs.Console.pl Admin::Package::ReinstallAll" -s /bin/bash otrs
+  su -c "/opt/otrs/bin/otrs.Console.pl Admin::Package::ReinstallAll" -s /bin/bash otrs || true
 
   sleep 1
   echo "false" > ${TMP_LOCK_FILE}
