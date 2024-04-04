@@ -64,6 +64,7 @@ RUN apt-get update && apt-get install -y \
   libcpan-audit-perl \
   libcrypt-jwt-perl \
   libcrypt-openssl-x509-perl \
+  libexcel-writer-xlsx-perl \
   && apt-get clean all
 
 RUN cpanm install Jq
