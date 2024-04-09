@@ -1,4 +1,5 @@
 customLogger "info" "run" "Launch the web server"
+touch /opt/otrs/healthy
 /usr/sbin/apache2ctl -D FOREGROUND 2>&1 | \
   while true; do
     if IFS= read -r MESSAGE; then
