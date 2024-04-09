@@ -20,4 +20,8 @@ zcli check config
 
 zcli upgrade
 
-zcli run znuny
+zcli run cron &
+
+zcli run daemon &
+
+zcli run apache2

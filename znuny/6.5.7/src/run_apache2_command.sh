@@ -1,5 +1,5 @@
-customLogger "info" "run" "Launch the daemon of Znuny"
-su -c "/opt/otrs/bin/otrs.Daemon.pl start" -s /bin/sh otrs 2>&1 | \
+customLogger "info" "run" "Launch the web server"
+/usr/sbin/apache2ctl -D FOREGROUND 2>&1 | \
   while true; do
     if IFS= read -r MESSAGE; then
       if [[ -n "${MESSAGE}" ]]; then
