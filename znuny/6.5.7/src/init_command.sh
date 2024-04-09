@@ -25,3 +25,5 @@ zcli run cron &
 zcli run daemon &
 
 zcli run apache2
+
+touch /opt/otrs/healthy
