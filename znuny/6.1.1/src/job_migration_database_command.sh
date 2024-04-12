@@ -1,19 +1,5 @@
 DUMP_FILE="/tmp/znuny-db-dump.sql"
 
-zcli user system
-
-zcli config znuny
-
-zcli config apache
-
-zcli config crons
-
-zcli user permissions
-
-zcli check modules
-
-zcli check config
-
 function create_remote_database_dump() {
   export PGPASSWORD=${args[-w]}
   pg_dump -U ${args[-u]} -h ${args[-h]} -p ${args[-p]} -d ${args[-n]} -f ${DUMP_FILE}
