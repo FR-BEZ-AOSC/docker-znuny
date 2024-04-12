@@ -43,37 +43,10 @@ case ${ZNUNY_MAILING_TYPE} in
     ;;
 esac
 
-customLogger "info" "config_znuny" "Generate customers backends"
-for i in {1..9}; do
-  COMPOSED_VAR="ZNUNY_CUSTOMER_BACKEND_${i}"
-  if [[ ! -z ${!COMPOSED_VAR} ]]; then
-    gen_add_customers_backend "${!COMPOSED_VAR}"
-  fi
-done
-
-customLogger "info" "config_znuny" "Generate customers synchronizations"
-for i in {1..9}; do
-  COMPOSED_VAR="ZNUNY_CUSTOMER_SYNCHRO_${i}"
-  if [[ ! -z ${!COMPOSED_VAR} ]]; then
-    gen_add_customers_synchro "${!COMPOSED_VAR}"
-  fi
-done
-
-customLogger "info" "config_znuny" "Generate agents backends"
-for i in {1..9}; do
-  COMPOSED_VAR="ZNUNY_AGENTS_BACKEND_${i}"
-  if [[ ! -z ${!COMPOSED_VAR} ]]; then
-    gen_add_agents_backend "${!COMPOSED_VAR}"
-  fi
-done
-
-customLogger "info" "config_znuny" "Generate agents synchronizations"
-for i in {1..9}; do
-  COMPOSED_VAR="ZNUNY_AGENTS_SYNCHRO_${i}"
-  if [[ ! -z ${!COMPOSED_VAR} ]]; then
-    gen_add_agents_synchro "${!COMPOSED_VAR}"
-  fi
-done
+customLogger "info" "config_znuny" "Generate users authentications"
+if [[ ! -z ${ZNUNY_AUTHENTICATIONS} ]]; then
+  gen_add_authentication "${ZNUNY_AUTHENTICATIONS}"
+fi
 
 if [[ ! -z ${ZNUNY_LOG_PATH} ]]; then
   gen_add_log_file "${ZNUNY_LOG_PATH}"

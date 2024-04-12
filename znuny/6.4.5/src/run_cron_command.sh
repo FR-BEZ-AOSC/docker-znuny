@@ -1,3 +1,4 @@
+customLogger "info" "run" "Launch Crons of Znuny"
 su -c "/opt/otrs/bin/Cron.sh start" -s /bin/sh otrs 2>&1 | \
   while true; do
     if IFS= read -r MESSAGE; then

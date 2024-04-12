@@ -1,6 +1,6 @@
 name: zcli
 help: Simple cli to manage Znuny's applicative container
-version: 6.1.1-0
+version: 6.4.5
 
 environment_variables:
   - name: ZNUNY_LOG_PATH
@@ -31,79 +31,9 @@ environment_variables:
     help: The application domain
   - name: ZNUNY_APACHE_REWRITE_RULES
     help: A custom rewrite rule
-  - name: ZNUNY_CUSTOMER_BACKEND_1
-    help: Customers authentication backend
-  - name: ZNUNY_CUSTOMER_BACKEND_2
-    help: Customers authentication backend
-  - name: ZNUNY_CUSTOMER_BACKEND_3
-    help: Customers authentication backend
-  - name: ZNUNY_CUSTOMER_BACKEND_4
-    help: Customers authentication backend
-  - name: ZNUNY_CUSTOMER_BACKEND_5
-    help: Customers authentication backend
-  - name: ZNUNY_CUSTOMER_BACKEND_6
-    help: Customers authentication backend
-  - name: ZNUNY_CUSTOMER_BACKEND_7
-    help: Customers authentication backend
-  - name: ZNUNY_CUSTOMER_BACKEND_8
-    help: Customers authentication backend
-  - name: ZNUNY_CUSTOMER_BACKEND_9
-    help: Customers authentication backend
-  - name: ZNUNY_CUSTOMER_SYNCHRO_1
-    help: Customers authentication synchronization
-  - name: ZNUNY_CUSTOMER_SYNCHRO_2
-    help: Customers authentication synchronization
-  - name: ZNUNY_CUSTOMER_SYNCHRO_3
-    help: Customers authentication synchronization
-  - name: ZNUNY_CUSTOMER_SYNCHRO_4
-    help: Customers authentication synchronization
-  - name: ZNUNY_CUSTOMER_SYNCHRO_5
-    help: Customers authentication synchronization
-  - name: ZNUNY_CUSTOMER_SYNCHRO_6
-    help: Customers authentication synchronization
-  - name: ZNUNY_CUSTOMER_SYNCHRO_7
-    help: Customers authentication synchronization
-  - name: ZNUNY_CUSTOMER_SYNCHRO_8
-    help: Customers authentication synchronization
-  - name: ZNUNY_CUSTOMER_SYNCHRO_9
-    help: Customers authentication synchronization
-  - name: ZNUNY_AGENTS_BACKEND_1
-    help: Agents authentication backend
-  - name: ZNUNY_AGENTS_BACKEND_2
-    help: Agents authentication backend
-  - name: ZNUNY_AGENTS_BACKEND_3
-    help: Agents authentication backend
-  - name: ZNUNY_AGENTS_BACKEND_4
-    help: Agents authentication backend
-  - name: ZNUNY_AGENTS_BACKEND_5
-    help: Agents authentication backend
-  - name: ZNUNY_AGENTS_BACKEND_6
-    help: Agents authentication backend
-  - name: ZNUNY_AGENTS_BACKEND_7
-    help: Agents authentication backend
-  - name: ZNUNY_AGENTS_BACKEND_8
-    help: Agents authentication backend
-  - name: ZNUNY_AGENTS_BACKEND_9
-    help: Agents authentication backend
-  - name: ZNUNY_AGENTS_SYNCHRO_1
-    help: Agents authentication synchronization
-  - name: ZNUNY_AGENTS_SYNCHRO_2
-    help: Agents authentication synchronization
-  - name: ZNUNY_AGENTS_SYNCHRO_3
-    help: Agents authentication synchronization
-  - name: ZNUNY_AGENTS_SYNCHRO_4
-    help: Agents authentication synchronization
-  - name: ZNUNY_AGENTS_SYNCHRO_5
-    help: Agents authentication synchronization
-  - name: ZNUNY_AGENTS_SYNCHRO_6
-    help: Agents authentication synchronization
-  - name: ZNUNY_AGENTS_SYNCHRO_7
-    help: Agents authentication synchronization
-  - name: ZNUNY_AGENTS_SYNCHRO_8
-    help: Agents authentication synchronization
-  - name: ZNUNY_AGENTS_SYNCHRO_9
-    help: Agents authentication synchronization
-
+  - name: ZNUNY_AUTHENTICATIONS
+    help: Users authentication settings
+ 
 commands:
   - name: config
     help: Manage the configuration of znuny
@@ -192,6 +122,8 @@ commands:
   - name: run
     help: Run Znuny
     commands:
+      - name: apache2
+        help: Run Apache2 web server
       - name: cron
         help: Run the crons of Znuny
       - name: daemon

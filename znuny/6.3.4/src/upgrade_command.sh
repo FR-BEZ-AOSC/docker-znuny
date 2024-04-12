@@ -3,7 +3,7 @@ TMP_LOCK_FILE="/tmp/upgrade.lock"
 echo "true" > ${TMP_LOCK_FILE}
 
 function upgrade() {
-  su -c "/opt/otrs/scripts/MigrateToZnuny6_3.pl" -s /bin/sh otrs
+  su -c "/opt/otrs/scripts/MigrateToZnuny6_5.pl" -s /bin/sh otrs
   
   sleep 1
 

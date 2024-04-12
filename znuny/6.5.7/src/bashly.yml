@@ -1,6 +1,6 @@
 name: zcli
 help: Simple cli to manage Znuny's applicative container
-version: 6.1.1-0
+version: 6.5.7
 
 environment_variables:
   - name: ZNUNY_LOG_PATH

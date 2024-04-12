@@ -134,7 +134,7 @@ EOF
 )
 }
 
-function gen_add_customers_backend() {
+function gen_add_authentication() {
   BLOCK="${1}"
 
   while IFS= read -r LINE; do
@@ -144,35 +144,6 @@ function gen_add_customers_backend() {
   echo "" >> ${CONFIG_PATH}
 }
 
-function gen_add_customers_synchro() {
-  BLOCK="${1}"
-
-  while IFS= read -r LINE; do
-    echo "    ${LINE}" >> ${CONFIG_PATH}
-  done <<< "${BLOCK}"
-
-  echo "" >> ${CONFIG_PATH}
-}
-
-function gen_add_agents_backend() {
-  BLOCK="${1}"
-
-  while IFS= read -r LINE; do
-    echo "    ${LINE}" >> ${CONFIG_PATH}
-  done <<< "${BLOCK}"
-
-  echo "" >> ${CONFIG_PATH}
-}
-
-function gen_add_agents_synchro() {
-  BLOCK="${1}"
-
-  while IFS= read -r LINE; do
-    echo "    ${LINE}" >> ${CONFIG_PATH}
-  done <<< "${BLOCK}"
-
-  echo "" >> ${CONFIG_PATH}
-}
 
 function gen_add_log_file() {
   LOGPATH=${1}
