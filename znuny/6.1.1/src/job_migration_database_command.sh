@@ -50,7 +50,7 @@ create_remote_database_dump 2>&1 |\
 while $(cat ${DUMP_FILE}); do
   if IFS= read -r MESSAGE; then
     if [[ -n "${MESSAGE}" ]]; then
-      echo -e "{\"timestamp\":\"$(date +'%Y-%m-%d %H:%M:%S')\", \"source\":\"upgrade\", \"message\":\"${MESSAGE}\"}"
+      echo -e "{\"timestamp\":\"$(date +'%Y-%m-%d %H:%M:%S')\", \"source\":\"migration_dump\", \"message\":\"${MESSAGE}\"}"
     fi
   fi
 done
@@ -61,7 +61,7 @@ delete_local_database 2>&1 |\
 while $(cat ${DUMP_FILE}); do
   if IFS= read -r MESSAGE; then
     if [[ -n "${MESSAGE}" ]]; then
-      echo -e "{\"timestamp\":\"$(date +'%Y-%m-%d %H:%M:%S')\", \"source\":\"upgrade\", \"message\":\"${MESSAGE}\"}"
+      echo -e "{\"timestamp\":\"$(date +'%Y-%m-%d %H:%M:%S')\", \"source\":\"migration_purge\", \"message\":\"${MESSAGE}\"}"
     fi
   fi
 done
@@ -72,7 +72,7 @@ create_user_roles 2>&1 |\
 while $(cat ${DUMP_FILE}); do
   if IFS= read -r MESSAGE; then
     if [[ -n "${MESSAGE}" ]]; then
-      echo -e "{\"timestamp\":\"$(date +'%Y-%m-%d %H:%M:%S')\", \"source\":\"upgrade\", \"message\":\"${MESSAGE}\"}"
+      echo -e "{\"timestamp\":\"$(date +'%Y-%m-%d %H:%M:%S')\", \"source\":\"migration_settings\", \"message\":\"${MESSAGE}\"}"
     fi
   fi
 done
@@ -83,7 +83,7 @@ import_dump_into_current_database 2>&1 |\
 while $(cat ${DUMP_FILE}); do
   if IFS= read -r MESSAGE; then
     if [[ -n "${MESSAGE}" ]]; then
-      echo -e "{\"timestamp\":\"$(date +'%Y-%m-%d %H:%M:%S')\", \"source\":\"upgrade\", \"message\":\"${MESSAGE}\"}"
+      echo -e "{\"timestamp\":\"$(date +'%Y-%m-%d %H:%M:%S')\", \"source\":\"migration_import\", \"message\":\"${MESSAGE}\"}"
     fi
   fi
 done
