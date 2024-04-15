@@ -77,8 +77,6 @@ commands:
   - name: job
     help: Commands for kubernetes job
     commands:
-      - name: upgrade
-        help: Upgrade database schemas
       - name: migration
         help: Migrate an existing database from a PostgreSQL server to the application database
         commands:
@@ -105,6 +103,9 @@ commands:
                 arg: password
                 required: true
                 help: The database password
+              - short: -f
+                arg: force
+                required: false
           - name: local
             help: Migrate an existing database from a dump file on the local filesystem
             args:
