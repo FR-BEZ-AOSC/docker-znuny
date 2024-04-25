@@ -192,6 +192,25 @@ EOF
 )
 }
 
+function gen_add_timezone() {
+  TZ=${1}
+  CONTENT=$(cat << EOF | tee -a ${CONFIG_PATH}
+    \$Self->{'OTRSTimeZone'} = '${TZ}';
+    \$Self->{'UserDefaultTimeZone'} =  '${TZ}';
+
+EOF
+)
+}
+
+function gen_add_securemode() {
+  MODE=${1}
+  CONTENT=$(cat << EOF | tee -a ${CONFIG_PATH}
+    \$Self->{SecureMode} = ${MODE};
+
+EOF
+)
+}
+
 function gen_add_return() {
   CONTENT=$(cat << EOF | tee -a ${CONFIG_PATH}
     return 1;

@@ -7,8 +7,14 @@ function check_modules_packages() {
     IFS=','
 
     for ADDON in ${ZNUNY_ADDONS}; do
-      echo -e "  Installation of the extention '${ADDON}'"
-      su -c "/opt/otrs/bin/otrs.Console.pl Admin::Package::Install ${ADDON}" -s /bin/bash otrs || true
+      echo -e "** Installation of the extention '${ADDON}'"
+
+      if [[ $(su -c "/opt/otrs/bin/otrs.Console.pl Admin::Package::FileSearch ${ADDON##*:}" -s /bin/bash otrs) ]]; then
+        su -c "/opt/otrs/bin/otrs.Console.pl Admin::Package::Reinstall ${ADDON}" -s /bin/bash otrs 1> /dev/null || true
+      else
+        su -c "/opt/otrs/bin/otrs.Console.pl Admin::Package::Install ${ADDON}" -s /bin/bash otrs 1> /dev/null || true
+      fi
+
     done
     
     unset IFS

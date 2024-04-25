@@ -48,13 +48,20 @@ if [[ ! -z ${ZNUNY_AUTHENTICATIONS_BACKENDS} ]]; then
   gen_add_authentication "${ZNUNY_AUTHENTICATIONS_BACKENDS}"
 fi
 
-if [[ ! -z ${ZNUNY_LOG_PATH} ]]; then
+customLogger "info" "config_znuny" "Generate the secure mode state"
+gen_add_securemode ${ZNUNY_SECURE_MODE:-$DEFAULT_ZNUNY_SECURE_MODE}
+
+customLogger "info" "config_znuny" "Generate the application timezone"
+gen_add_timezone ${ZNUNY_TIMEZONE:-$DEFAULT_ZNUNY_TIMEZONE}
+
+customLogger "info" "config_znuny" "Generate logging configurations"
+if [[ -z ${ZNUNY_LOG_PATH} ]]; then
+  gen_add_log_rsyslog 
+else
   gen_add_log_file "${ZNUNY_LOG_PATH}"
   APP_USER="otrs"
   touch /var/log/znuny
-  chown ${APP_USER} /var/log/znuny
-else
-  gen_add_log_rsyslog 
+  chown ${DEFAULT_APP_USER} /var/log/znuny
 fi
 
 customLogger "info" "config_znuny" "Generate the configuration return"

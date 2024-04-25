@@ -3,10 +3,12 @@ help: Simple cli to manage Znuny's applicative container
 version: 6.5.7
 
 environment_variables:
-  - name: TIMEZONE
+  - name: ZNUNY_TIMEZONE
     help: The service timezone
   - name: ZNUNY_LOG_PATH
     help: The log file path
+  - name: ZNUNY_SECURE_MODE
+    help: Enable or not the secure mode
   - name: ZNUNY_DATABASE_HOST
     help: The database host
   - name: ZNUNY_DATABASE_PORT

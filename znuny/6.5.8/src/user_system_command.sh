@@ -1,7 +1,5 @@
-APP_USER="otrs"
-
-customLogger "info" "user_system" "Create the system user '${APP_USER}'"
-useradd -d /opt/otrs -c 'Znuny user' -g www-data -s /bin/bash -M -N ${APP_USER} 2>&1 |\
+customLogger "info" "user_system" "Create the system user '${DEFAULT_APP_USER}'"
+useradd -d /opt/otrs -c 'Znuny user' -g www-data -s /bin/bash -M -N ${DEFAULT_APP_USER} 2>&1 |\
   for ((i = 0; i < 3; i++)); do
     if IFS= read -r MESSAGE; then
       if [[ -n "${MESSAGE}" ]]; then
