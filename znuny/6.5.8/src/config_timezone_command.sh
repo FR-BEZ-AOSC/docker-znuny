@@ -3,6 +3,7 @@ TMP_LOCK_FILE="/tmp/config_timezone.lock"
 echo "true" > ${TMP_LOCK_FILE}
 
 function set_timezone() {
+  rm -f /etc/localtime
   cp -f "/usr/share/zoneinfo/${TIMEZONE:-$DEFAULT_TIMEZONE}" /etc/localtime
   echo "${TIMEZONE:-$DEFAULT_TIMEZONE}" > /etc/timezone
 
