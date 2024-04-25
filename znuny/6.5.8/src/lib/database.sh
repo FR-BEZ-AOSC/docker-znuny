@@ -25,11 +25,11 @@ function database_init_pgsql() {
 
   export PGPASSWORD=${PASSWORD}
   
-  psql -q -h ${HOST} -p${PORT} -U ${USER} -d ${NAME} -f /opt/otrs/scripts/database/otrs-schema.postgresql.sql
+  psql -q -h ${HOST} -p${PORT} -U ${USER} -d ${NAME} -f /opt/otrs/scripts/database/schema.postgresql.sql
   sleep 1
-  psql -q -h ${HOST} -p${PORT} -U ${USER} -d ${NAME} -f /opt/otrs/scripts/database/otrs-initial_insert.postgresql.sql
+  psql -q -h ${HOST} -p${PORT} -U ${USER} -d ${NAME} -f /opt/otrs/scripts/database/initial_insert.postgresql.sql
   sleep 1
-  psql -q -h ${HOST} -p${PORT} -U ${USER} -d ${NAME} -f /opt/otrs/scripts/database/otrs-schema-post.postgresql.sql
+  psql -q -h ${HOST} -p${PORT} -U ${USER} -d ${NAME} -f /opt/otrs/scripts/database/schema-post.postgresql.sql
 }
 
 function database_wait_pgsql() {
