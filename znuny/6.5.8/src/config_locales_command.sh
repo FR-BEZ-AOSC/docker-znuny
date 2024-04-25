@@ -1,4 +1,4 @@
-TMP_LOCK_FILE="/tmp/locales.lock"
+TMP_LOCK_FILE="/tmp/config_locales.lock"
 
 echo "true" > ${TMP_LOCK_FILE}
 
@@ -14,12 +14,12 @@ function set_locales() {
 }
 
 
-customLogger "info" "locales" "Configure locale environment"
+customLogger "info" "config_locales" "Configure locale environment"
 set_locales 2>&1 |\
   while $(cat ${TMP_LOCK_FILE}); do
     if IFS= read -r MESSAGE; then
       if [[ -n "${MESSAGE}" ]]; then
-        echo -e "{\"timestamp\":\"$(date +'%Y-%m-%d %H:%M:%S')\", \"source\":\"locales\", \"message\":\"${MESSAGE}\"}"
+        echo -e "{\"timestamp\":\"$(date +'%Y-%m-%d %H:%M:%S')\", \"source\":\"config_locales\", \"message\":\"${MESSAGE}\"}"
       fi
     fi
   done

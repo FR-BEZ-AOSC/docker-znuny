@@ -3,6 +3,8 @@ help: Simple cli to manage Znuny's applicative container
 version: 6.5.7
 
 environment_variables:
+  - name: TIMEZONE
+    help: The service timezone
   - name: ZNUNY_LOG_PATH
     help: The log file path
   - name: ZNUNY_DATABASE_HOST
@@ -48,6 +50,10 @@ commands:
         help: Create all crons
       - name: database
         help: Initialize the database
+      - name: locales
+        help: Set locales
+      - name: timezone
+        help: Set the timezone
       - name: modules
         help: Install application extensions
       - name: znuny
@@ -118,9 +124,6 @@ commands:
               - short: -f
                 arg: force
                 required: false
-
-  - name: locales
-    help: Set locales
 
   - name: run
     help: Run Znuny

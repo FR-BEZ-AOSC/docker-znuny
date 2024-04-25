@@ -1,4 +1,4 @@
-zcli locales
+zcli config timezone
 
 zcli user system
 
