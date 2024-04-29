@@ -40,7 +40,9 @@ environment_variables:
   - name: ZNUNY_AUTHENTICATIONS_BACKENDS
     help: Users authentication settings
   - name: ZNUNY_ADDONS
-    help: Applications extension to add
+    help: List of application extensions to add
+  - name: ZNUNY_CONFIGURATIONS_OVERRIDES_DIRECTORY
+    help: Directory path of custom configurations overrides
 
 commands:
   - name: config
@@ -58,6 +60,8 @@ commands:
         help: Set the timezone
       - name: modules
         help: Install application extensions
+      - name: override
+        help: Override given configurations
       - name: znuny
         help: Create the main configuration file of Znuny
 

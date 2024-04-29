@@ -74,7 +74,7 @@ RUN cpanm install Jq
 COPY --from=builder /tmp/zcli /usr/bin/
 
 RUN /usr/bin/zcli download -r ${ZNUNY_VERSION} -s ${ZNUNY_CHECKSUM} \
-    && zcli config locales
+      && zcli config locales
 
 EXPOSE 80
 
