@@ -41,7 +41,7 @@ function set_configurations_overrides() {
 }
 
 # if [[ ! -z ${ZNUNY_CONFIGURATIONS_OVERRIDES} ]]; then
-customLogger "info" "config_override" "Configure custom override configurations"
+customLogger "info" "config_override" "Configure custom configurations overrides"
 set_configurations_overrides 2>&1 |\
   while $(cat ${TMP_LOCK_FILE}); do
     if IFS= read -r MESSAGE; then

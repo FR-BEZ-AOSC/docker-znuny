@@ -1,5 +1,7 @@
 zcli config timezone
 
+zcli config override
+
 zcli user system
 
 zcli config znuny
