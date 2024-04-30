@@ -12,6 +12,7 @@ services:
     image: ghcr.io/fr-bez-aosc/znuny:beta-6.1.1
     container_name: znuny
     environment:
+      ZNUNY_TIMEZONE: Europe/Paris
       ZNUNY_DATABASE_HOST: postgresql
       ZNUNY_DATABASE_PORT: 5432
       ZNUNY_DATABASE_NAME: znuny

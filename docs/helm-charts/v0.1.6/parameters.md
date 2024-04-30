@@ -126,4 +126,3 @@
 | config.resources.limits.memory                       | 128Mi                                                | Defines the pod RAM limit resources |
 | config.resources.requests.cpu                        | 100m                                                 | Defines the pod CPU request resources |
 | config.resources.requests.memory                     | 128Mi                                                | Defines the pod RAM request resources |
-
