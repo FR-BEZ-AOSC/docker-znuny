@@ -43,6 +43,8 @@ environment_variables:
     help: List of application extensions to add
   - name: ZNUNY_CONFIGURATIONS_OVERRIDES_DIRECTORY
     help: Directory path of custom configurations overrides
+  - name: ZNUNY_HEALTHSTATUS_APIKEY
+    help: Api key to use with the plugin healthstatus
 
 commands:
   - name: config

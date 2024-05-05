@@ -54,6 +54,11 @@ gen_add_securemode ${ZNUNY_SECURE_MODE:-$DEFAULT_ZNUNY_SECURE_MODE}
 customLogger "info" "config_znuny" "Generate the application timezone"
 gen_add_timezone ${ZNUNY_TIMEZONE:-$DEFAULT_ZNUNY_TIMEZONE}
 
+if [[ ! -z ${ZNUNY_HEALTHSTATUS_APIKEY} ]]; then
+  customLogger "info" "config_znuny" "Generate the healthstatus api key"
+  gen_add_healthstatus_apikey "${ZNUNY_HEALTHSTATUS_APIKEY}"
+fi
+
 customLogger "info" "config_znuny" "Generate logging configurations"
 if [[ -z ${ZNUNY_LOG_PATH} ]]; then
   gen_add_log_rsyslog 

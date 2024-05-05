@@ -211,6 +211,14 @@ EOF
 )
 }
 
+function gen_add_healthstatus_apikey() {
+  API_KEY=${1}
+  CONTENT=$(cat << EOF | tee -a ${CONFIG_PATH}
+    \$Self->{'Znuny::HealthStatus::API::Key'} =  '${API_KEY}';
+EOF
+)
+}
+
 function gen_add_return() {
   CONTENT=$(cat << EOF | tee -a ${CONFIG_PATH}
     return 1;
