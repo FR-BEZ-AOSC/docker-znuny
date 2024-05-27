@@ -43,7 +43,6 @@ Stop the new instance :
 
 ```bash
 kubectl patch deployment znuny \
-  -n demo \
   -p '{"spec": {"replicas": 0}}'
 ```
 
@@ -51,7 +50,6 @@ Migrate migrate the database :
 
 ```bash
 kubectl create \
-  -n demo \
   -f ./tests/job.migration.yaml
 ```
 
@@ -59,7 +57,6 @@ Restart the new instance :
 
 ```bash
 kubectl patch deployment znuny \
-  -n demo \
   -p '{"spec": {"replicas": 1}}'
 ```
 
@@ -67,6 +64,5 @@ If desired, delete the migration job :
 
 ```bash
 kubectl delete \
-  -n demo \
   -f ./tests/job.migration.yaml
 ```

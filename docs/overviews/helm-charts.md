@@ -9,7 +9,8 @@ They currently only manage the deployment of the Znuny application, as well as t
 Helm charters manage the following resources:
 
 * ServiceAccount
-* ConfigMap
+* ConfigMaps
+* Secrets
 * PersistentVolumeClaims
 * Deployment
 * HorizontalPodScaling

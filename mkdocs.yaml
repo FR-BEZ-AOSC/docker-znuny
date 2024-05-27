@@ -22,14 +22,15 @@ nav:
     - Docker Znuny: overviews/docker-znuny.md
     - Helm Charts: overviews/helm-charts.md
   - Docker Znuny:
-    - v6.1.1:
-      - Commands: docker-znuny/v6.1.1/commands.md
-      - Deployment: docker-znuny/v6.1.1/deployment.md
-      - Environment: docker-znuny/v6.1.1/environment.md
+    - v6.5.8:
+      - Commands: docker-znuny/v6.5.8/commands.md
+      - Deployment: docker-znuny/v6.5.8/deployment.md
+      - Environment: docker-znuny/v6.5.8/environment.md
   - Helm Charts:
     - v0.1.6:
       - Installation: helm-charts/v0.1.6/installation.md
       - Parameters: helm-charts/v0.1.6/parameters.md
+      - Usage: helm-charts/v0.1.6/usage.md
       - Upgrade: helm-charts/v0.1.6/upgrade.md
       - Migration: helm-charts/v0.1.6/migration.md
   - Development:

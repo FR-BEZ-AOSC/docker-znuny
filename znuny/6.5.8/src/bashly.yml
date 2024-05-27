@@ -58,12 +58,12 @@ commands:
         help: Initialize the database
       - name: locales
         help: Set locales
-      - name: timezone
-        help: Set the timezone
       - name: modules
         help: Install application extensions
       - name: override
         help: Override given configurations
+      - name: timezone
+        help: Set the timezone
       - name: znuny
         help: Create the main configuration file of Znuny
 
