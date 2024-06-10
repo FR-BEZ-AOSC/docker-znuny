@@ -1,5 +1,5 @@
 !!!warning
-    We assume that a database is available for Znuny deployment.
+    We assume that a database is available to Znuny.  
     Helm charts do not take into account the deployment of this one.
 
 Add the Helm charts repository :
@@ -12,7 +12,6 @@ Install the Helm release :
 
 ```bash
 helm install znuny aosc/znuny \
-  --namespace demo \
   --version 0.1.6 \
   --set config.database.host=postgresql.demo.svc.cluster.local \
   --set config.database.port=5432 \

@@ -13,7 +13,6 @@ If the base image for higher-level Helm charts includes a new image version by d
 
 ```bash
 helm upgrade znuny aosc/znuny \
-  --namespace demo \
   --version 0.1.6 \
   --reuse-values
 ```
@@ -22,7 +21,6 @@ Otherwise, you'll need to specify the desired image version.
 
 ```bash
 helm upgrade znuny aosc/znuny \
-  --namespace demo \
   --version 0.1.6 \
   --set image.tag=beta-6.5.8 \
   --reuse-values

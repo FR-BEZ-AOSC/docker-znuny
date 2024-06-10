@@ -18,11 +18,10 @@ services:
   app:
     build:
       context: .
-      dockerfile: ./znuny/Dockerfile
-    image: ghcr.io/fr-bez-aosc/znuny:alpha-6.1.1
+      dockerfile: ./znuny/6.5.8/Dockerfile
+    image: ghcr.io/fr-bez-aosc/znuny:alpha-6.5.8
     container_name: znuny
     environment:
-      ZNUNY_DATABASE_TYPE: pgsql
       ZNUNY_DATABASE_HOST: postgresql
       ZNUNY_DATABASE_PORT: 5432
       ZNUNY_DATABASE_NAME: znuny

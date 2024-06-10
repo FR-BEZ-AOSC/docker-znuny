@@ -123,9 +123,9 @@ Each feature therefore has a variable capable of enabling or disabling it, and c
           ZNUNY_DATABASE_PASSWORD: password
           ZNUNY_APACHE_DOMAIN: znuny.domain.tld
           ZNUNY_APACHE_REWRITE_RULES: |-
-            RewriteRule ^/$ https://%{HTTP_HOST}/otrs/customer.pl
-            RewriteRule ^/otrs/$ https://%{HTTP_HOST}/otrs/customer.pl
-            RewriteRule ^/otrs$ https://%{HTTP_HOST}/otrs/customer.pl
+            RewriteRule ^/$ http://%{HTTP_HOST}/otrs/customer.pl
+            RewriteRule ^/otrs/$ http://%{HTTP_HOST}/otrs/customer.pl
+            RewriteRule ^/otrs$ http://%{HTTP_HOST}/otrs/customer.pl
     ```
 
 !!!info
@@ -164,108 +164,4 @@ Each feature therefore has a variable capable of enabling or disabling it, and c
     Local administrator user configuration only works if LDAP agent configurations are not specified.  
     If agent LDAP configurations are defined, those of the local administrator user become obsolete.
 
-### Customers
 
-!!!example
-
-    ``` yaml title="docker-compose.yaml" linenums="1" hl_lines="16-37"
-    ---
-    version: "3"
-
-    services:
-      app:
-        image: ghcr.io/fr-bez-aosc/znuny:beta-6.1.1
-        container_name: znuny
-        ports:
-        - 8080:80
-        environment:
-          ZNUNY_DATABASE_HOST: db
-          ZNUNY_DATABASE_PORT: 5432
-          ZNUNY_DATABASE_NAME: znuny
-          ZNUNY_DATABASE_USER: znuny
-          ZNUNY_DATABASE_PASSWORD: password
-          ZNUNY_CUSTOMER_BACKEND_1: |-
-            $$Self->{AuthModule} = 'Kernel::System::Auth::LDAP';
-            $$Self->{'AuthModule::LDAP::Host'} = 'ldap.example.com';
-            $$Self->{'AuthModule::LDAP::BaseDN'} = 'dc=example,dc=com';
-            $$Self->{'AuthModule::LDAP::UID'} = 'uid';
-            $$Self->{'AuthModule::LDAP::GroupDN'} = 'cn=znuny-allow,ou=posixGroups,dc=example,dc=com';
-            $$Self->{'AuthModule::LDAP::AccessAttr'} = 'memberUid';
-            $$Self->{'AuthModule::LDAP::UserAttr'} = 'UID';
-            $$Self->{'AuthModule::LDAP::UserAttr'} = 'DN';
-          ZNUNY_CUSTOMER_SYNCHRO_1: |-
-            $$Self->{'AuthSyncModule'} = 'Kernel::System::Auth::Sync::LDAP';
-            $$Self->{'AuthSyncModule::LDAP::Host'} = 'ldap.example.com';
-            $$Self->{'AuthSyncModule::LDAP::BaseDN'} = 'dc=example,dc=com';
-            $$Self->{'AuthSyncModule::LDAP::UID'} = 'uid';
-            $$Self->{'AuthSyncModule::LDAP::SearchUserDN'} = '';
-            $$Self->{'AuthSyncModule::LDAP::SearchUserPw'} = '';
-            $$Self->{'AuthSyncModule::LDAP::AlwaysFilter'} = '';
-            $$Self->{'AuthSyncModule::LDAP::UserSyncMap'} = {
-                UserFirstname => 'givenName',
-                UserLastname  => 'sn',
-                UserEmail     => 'mail',
-            };
-    ```
-
-!!!info
-    This step is almost mandatory to keep user management simple and efficient.
-
-    Environment variables ending in `_X` are repeatable variables and are therefore suffixed with a number.  
-    The `X` character must be replaced by a number between 1 and 9, allowing multiple LDAP connection backends to be configured.
-
-    Use of any other number will be ignored.
-
-### Agents
-
-!!!example
-
-    ``` yaml title="docker-compose.yaml" linenums="1" hl_lines="16-47"
-    ---
-    version: "3"
-
-    services:
-      app:
-        image: ghcr.io/fr-bez-aosc/znuny:beta-6.1.1
-        container_name: znuny
-        ports:
-        - 8080:80
-        environment:
-          ZNUNY_DATABASE_HOST: db
-          ZNUNY_DATABASE_PORT: 5432
-          ZNUNY_DATABASE_NAME: znuny
-          ZNUNY_DATABASE_USER: znuny
-          ZNUNY_DATABASE_PASSWORD: password
-          ZNUNY_AGENT_BACKEND_1: |-
-            $$Self->{AuthModule} = 'Kernel::System::Auth::LDAP';
-            $$Self->{'AuthModule::LDAP::Host'} = 'ldap.example.com';
-            $$Self->{'AuthModule::LDAP::BaseDN'} = 'dc=example,dc=com';
-            $$Self->{'AuthModule::LDAP::UID'} = 'uid';
-            $$Self->{'AuthModule::LDAP::GroupDN'} = 'cn=znuny-allow,ou=posixGroups,dc=example,dc=com';
-            $$Self->{'AuthModule::LDAP::AccessAttr'} = 'memberUid';
-            $$Self->{'AuthModule::LDAP::UserAttr'} = 'UID';
-            $$Self->{'AuthModule::LDAP::UserAttr'} = 'DN';
-          ZNUNY_AGENT_SYNCHRO_1: |-
-            $$Self->{'AuthSyncModule'} = 'Kernel::System::Auth::Sync::LDAP';
-            $$Self->{'AuthSyncModule::LDAP::Host'} = 'ldap.example.com';
-            $$Self->{'AuthSyncModule::LDAP::BaseDN'} = 'dc=example,dc=com';
-            $$Self->{'AuthSyncModule::LDAP::UID'} = 'uid';
-            $$Self->{'AuthSyncModule::LDAP::SearchUserDN'} = '';
-            $$Self->{'AuthSyncModule::LDAP::SearchUserPw'} = '';
-            $$Self->{'AuthSyncModule::LDAP::AlwaysFilter'} = '';
-            $$Self->{'AuthSyncModule::LDAP::UserSyncMap'} = {
-                UserFirstname => 'givenName',
-                UserLastname  => 'sn',
-                UserEmail     => 'mail',
-            };
-    ```
-
-!!!info
-    This step is almost mandatory to keep operator management simple and efficient.
-
-    LDAP configuration for agents disables local users.
-
-    Environment variables ending in `_X` are repeatable variables and are therefore suffixed with a number.  
-    The `X` character must be replaced by a number between 1 and 9, allowing multiple LDAP connection backends to be configured.
-
-    Use of any other number will be ignored.
