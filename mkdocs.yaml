@@ -26,6 +26,7 @@ nav:
       - Commands: docker-znuny/v6.5.8/commands.md
       - Deployment: docker-znuny/v6.5.8/deployment.md
       - Environment: docker-znuny/v6.5.8/environment.md
+      - Features: docker-znuny/v6.5.8/features.md
   - Helm Charts:
     - v0.1.6:
       - Installation: helm-charts/v0.1.6/installation.md
