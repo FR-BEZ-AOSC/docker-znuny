@@ -11,7 +11,7 @@ function check_modules_packages() {
 
       if [[ $(su -c "/opt/otrs/bin/otrs.Console.pl Admin::Package::FileSearch ${ADDON##*:}" -s /bin/bash otrs) ]]; then
         su -c "/opt/otrs/bin/otrs.Console.pl Admin::Package::Reinstall ${ADDON}" -s /bin/bash otrs 1> /dev/null || true
-      else
+      elif [[ ! $(su -c "/opt/otrs/bin/otrs.Console.pl Admin::Package::FileSearch ${ADDON##*:}" -s /bin/bash otrs) ]]; then
         su -c "/opt/otrs/bin/otrs.Console.pl Admin::Package::Install ${ADDON}" -s /bin/bash otrs 1> /dev/null || true
       fi
 
