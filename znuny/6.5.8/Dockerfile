@@ -78,4 +78,4 @@ RUN /usr/bin/zcli download -r ${ZNUNY_VERSION} -s ${ZNUNY_CHECKSUM} \
 
 EXPOSE 80
 
-ENTRYPOINT [ "zcli", "init" ]
+ENTRYPOINT [ "zcli", "init", "all" ]

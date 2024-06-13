@@ -91,6 +91,13 @@ commands:
 
   - name: init
     help: Initialize the container
+    commands:
+      - name: all
+        help: Initialize all features
+      - name: frontend
+        help: Initialize only the daemon and the webserver
+      - name: background
+        help: Initialize only crons
 
   - name: job
     help: Commands for kubernetes job
