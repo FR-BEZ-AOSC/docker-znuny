@@ -28,8 +28,8 @@ RUN apt-get update && apt-get install -y \
   openssl \
   cron \
   locales \
+  gnupg2 \
   cpanminus \
-  postgresql-client \
   libapache2-mod-perl2 \
   libtimedate-perl \
   libnet-dns-perl \
@@ -67,6 +67,12 @@ RUN apt-get update && apt-get install -y \
   libcrypt-openssl-x509-perl \
   libexcel-writer-xlsx-perl \
   libcrypt-smime-perl \
+  && apt-get clean all
+
+RUN curl -fsSL https://www.postgresql.org/media/keys/ACCC4CF8.asc | gpg --dearmor -o /etc/apt/trusted.gpg.d/postgresql.gpg \
+  && sh -c 'echo "deb https://apt.postgresql.org/pub/repos/apt bookworm-pgdg main" > /etc/apt/sources.list.d/pgdg.list' \
+  && apt update \
+  && apt install -y postgresql-client-16 \
   && apt-get clean all
 
 RUN cpanm install Jq
