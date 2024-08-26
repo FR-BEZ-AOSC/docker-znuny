@@ -2,62 +2,67 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docker-znuny.aosc-portal.com/</loc>
-         <lastmod>2024-03-14</lastmod>
+         <lastmod>2024-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docker-znuny.aosc-portal.com/development/docker-znuny/</loc>
-         <lastmod>2024-03-14</lastmod>
+         <lastmod>2024-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docker-znuny.aosc-portal.com/development/helm-charts/</loc>
-         <lastmod>2024-03-14</lastmod>
+         <lastmod>2024-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docker-znuny.aosc-portal.com/docker-znuny/v6.1.1/commands/</loc>
-         <lastmod>2024-03-14</lastmod>
+         <loc>https://docker-znuny.aosc-portal.com/docker-znuny/v6.5.8/commands/</loc>
+         <lastmod>2024-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docker-znuny.aosc-portal.com/docker-znuny/v6.1.1/deployment/</loc>
-         <lastmod>2024-03-14</lastmod>
+         <loc>https://docker-znuny.aosc-portal.com/docker-znuny/v6.5.8/deployment/</loc>
+         <lastmod>2024-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docker-znuny.aosc-portal.com/docker-znuny/v6.1.1/environment/</loc>
-         <lastmod>2024-03-14</lastmod>
+         <loc>https://docker-znuny.aosc-portal.com/docker-znuny/v6.5.8/environment/</loc>
+         <lastmod>2024-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docker-znuny.aosc-portal.com/helm-charts/v0.1.1/installation/</loc>
-         <lastmod>2024-03-14</lastmod>
+         <loc>https://docker-znuny.aosc-portal.com/helm-charts/v0.1.6/installation/</loc>
+         <lastmod>2024-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docker-znuny.aosc-portal.com/helm-charts/v0.1.1/migration/</loc>
-         <lastmod>2024-03-14</lastmod>
+         <loc>https://docker-znuny.aosc-portal.com/helm-charts/v0.1.6/migration/</loc>
+         <lastmod>2024-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docker-znuny.aosc-portal.com/helm-charts/v0.1.1/parameters/</loc>
-         <lastmod>2024-03-14</lastmod>
+         <loc>https://docker-znuny.aosc-portal.com/helm-charts/v0.1.6/parameters/</loc>
+         <lastmod>2024-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docker-znuny.aosc-portal.com/helm-charts/v0.1.1/upgrade/</loc>
-         <lastmod>2024-03-14</lastmod>
+         <loc>https://docker-znuny.aosc-portal.com/helm-charts/v0.1.6/upgrade/</loc>
+         <lastmod>2024-08-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docker-znuny.aosc-portal.com/helm-charts/v0.1.6/usage/</loc>
+         <lastmod>2024-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docker-znuny.aosc-portal.com/overviews/docker-znuny/</loc>
-         <lastmod>2024-03-14</lastmod>
+         <lastmod>2024-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docker-znuny.aosc-portal.com/overviews/helm-charts/</loc>
-         <lastmod>2024-03-14</lastmod>
+         <lastmod>2024-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

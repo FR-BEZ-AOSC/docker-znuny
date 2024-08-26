@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://docker-znuny.aosc-portal.com/docker-znuny/v6.1.1/deployment/">
+        <link rel="canonical" href="https://docker-znuny.aosc-portal.com/docker-znuny/v6.5.8/deployment/">
       
       
         <link rel="prev" href="../commands/">
@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.6">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.33">
     
     
       
@@ -28,10 +28,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.35e1ed30.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.3cba04c6.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.356b1318.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -69,9 +69,6 @@
     
     <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="indigo">
   
-    
-    
-      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -128,9 +125,9 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
     
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
       </label>
     
@@ -138,15 +135,18 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
     
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
       </label>
     
   
 </form>
       
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -177,7 +177,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -194,7 +194,7 @@
         <a href="https://github.com/FR-BEZ-AOSC/docker-znuny" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
   </div>
   <div class="md-source__repository">
     FR-BEZ-AOSC/docker-znuny
@@ -272,7 +272,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../helm-charts/v0.1.1/installation/" class="md-tabs__link">
+        <a href="../../../helm-charts/v0.1.6/installation/" class="md-tabs__link">
           
   
   Helm Charts
@@ -345,7 +345,7 @@
       <a href="https://github.com/FR-BEZ-AOSC/docker-znuny" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
   </div>
   <div class="md-source__repository">
     FR-BEZ-AOSC/docker-znuny
@@ -360,23 +360,22 @@
   
   
   
-    
-    
+  
     
     
     
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+    <li class="md-nav__item md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
         
           
-          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -396,6 +395,7 @@
             
               
                 
+  
   
   
   
@@ -419,6 +419,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../../overviews/docker-znuny/" class="md-nav__link">
         
@@ -436,6 +437,7 @@
             
               
                 
+  
   
   
   
@@ -468,17 +470,19 @@
     
   
   
-    
-    
+  
     
     
     
       
+        
+        
       
+      
+    
     
     <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
@@ -509,14 +513,16 @@
     
   
   
+  
     
     
     
+      
+      
     
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
@@ -526,7 +532,7 @@
             
   
   <span class="md-ellipsis">
-    v6.1.1
+    v6.5.8
   </span>
   
 
@@ -536,12 +542,13 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
-            v6.1.1
+            v6.5.8
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
               
                 
+  
   
   
   
@@ -565,6 +572,7 @@
   
   
     
+  
   
   
     <li class="md-nav__item md-nav__item--active">
@@ -609,14 +617,18 @@
       
         <li class="md-nav__item">
   <a href="#required-configurations" class="md-nav__link">
-    Required configurations
+    <span class="md-ellipsis">
+      Required configurations
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#optional-configurations" class="md-nav__link">
-    Optional configurations
+    <span class="md-ellipsis">
+      Optional configurations
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Optional configurations">
@@ -624,42 +636,54 @@
         
           <li class="md-nav__item">
   <a href="#mails" class="md-nav__link">
-    Mails
+    <span class="md-ellipsis">
+      Mails
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#logs" class="md-nav__link">
-    Logs
+    <span class="md-ellipsis">
+      Logs
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#apache" class="md-nav__link">
-    Apache
+    <span class="md-ellipsis">
+      Apache
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#user" class="md-nav__link">
-    User
+  <a href="#local-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      Local user
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#customers" class="md-nav__link">
-    Customers
+  <a href="#addons" class="md-nav__link">
+    <span class="md-ellipsis">
+      Addons
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#agents" class="md-nav__link">
-    Agents
+  <a href="#authentications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentications
+    </span>
   </a>
   
 </li>
@@ -680,6 +704,7 @@
             
               
                 
+  
   
   
   
@@ -718,23 +743,22 @@
   
   
   
-    
-    
+  
     
     
     
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+    <li class="md-nav__item md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -757,14 +781,16 @@
   
   
   
+  
     
     
     
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
@@ -774,7 +800,7 @@
             
   
   <span class="md-ellipsis">
-    v0.1.1
+    v0.1.6
   </span>
   
 
@@ -784,7 +810,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_1">
             <span class="md-nav__icon md-icon"></span>
-            v0.1.1
+            v0.1.6
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -793,8 +819,9 @@
   
   
   
+  
     <li class="md-nav__item">
-      <a href="../../../helm-charts/v0.1.1/installation/" class="md-nav__link">
+      <a href="../../../helm-charts/v0.1.6/installation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -813,8 +840,9 @@
   
   
   
+  
     <li class="md-nav__item">
-      <a href="../../../helm-charts/v0.1.1/parameters/" class="md-nav__link">
+      <a href="../../../helm-charts/v0.1.6/parameters/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -833,8 +861,30 @@
   
   
   
+  
     <li class="md-nav__item">
-      <a href="../../../helm-charts/v0.1.1/upgrade/" class="md-nav__link">
+      <a href="../../../helm-charts/v0.1.6/usage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Usage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../helm-charts/v0.1.6/upgrade/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -853,8 +903,9 @@
   
   
   
+  
     <li class="md-nav__item">
-      <a href="../../../helm-charts/v0.1.1/migration/" class="md-nav__link">
+      <a href="../../../helm-charts/v0.1.6/migration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -888,23 +939,22 @@
   
   
   
-    
-    
+  
     
     
     
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+    <li class="md-nav__item md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -927,6 +977,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../../development/docker-znuny/" class="md-nav__link">
         
@@ -944,6 +995,7 @@
             
               
                 
+  
   
   
   
@@ -995,14 +1047,18 @@
       
         <li class="md-nav__item">
   <a href="#required-configurations" class="md-nav__link">
-    Required configurations
+    <span class="md-ellipsis">
+      Required configurations
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#optional-configurations" class="md-nav__link">
-    Optional configurations
+    <span class="md-ellipsis">
+      Optional configurations
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Optional configurations">
@@ -1010,42 +1066,54 @@
         
           <li class="md-nav__item">
   <a href="#mails" class="md-nav__link">
-    Mails
+    <span class="md-ellipsis">
+      Mails
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#logs" class="md-nav__link">
-    Logs
+    <span class="md-ellipsis">
+      Logs
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#apache" class="md-nav__link">
-    Apache
+    <span class="md-ellipsis">
+      Apache
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#user" class="md-nav__link">
-    User
+  <a href="#local-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      Local user
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#customers" class="md-nav__link">
-    Customers
+  <a href="#addons" class="md-nav__link">
+    <span class="md-ellipsis">
+      Addons
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#agents" class="md-nav__link">
-    Agents
+  <a href="#authentications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentications
+    </span>
   </a>
   
 </li>
@@ -1105,7 +1173,7 @@
 
 <span class="nt">services</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">app</span><span class="p">:</span>
-<span class="hll"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ghcr.io/fr-bez-aosc/znuny:beta-6.1.1</span>
+<span class="hll"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ghcr.io/fr-bez-aosc/znuny:beta-6.5.8</span>
 </span><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">znuny</span>
 <span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080:80</span>
@@ -1147,7 +1215,7 @@
 
 <span class="nt">services</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">app</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ghcr.io/fr-bez-aosc/znuny:beta-6.1.1</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ghcr.io/fr-bez-aosc/znuny:beta-6.5.8</span>
 <span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">znuny</span>
 <span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080:80</span>
@@ -1192,7 +1260,7 @@ Otherwise, this variable will be set to <code>internal</code> and all other mail
 
 <span class="nt">services</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">app</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ghcr.io/fr-bez-aosc/znuny:beta-6.1.1</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ghcr.io/fr-bez-aosc/znuny:beta-6.5.8</span>
 <span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">znuny</span>
 <span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080:80</span>
@@ -1242,7 +1310,7 @@ Daemon and cron logs are output directly in the standard <em>json</em> container
 
 <span class="nt">services</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">app</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ghcr.io/fr-bez-aosc/znuny:beta-6.1.1</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ghcr.io/fr-bez-aosc/znuny:beta-6.5.8</span>
 <span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">znuny</span>
 <span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080:80</span>
@@ -1254,9 +1322,9 @@ Daemon and cron logs are output directly in the standard <em>json</em> container
 <span class="w">      </span><span class="nt">ZNUNY_DATABASE_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">password</span>
 <span class="hll"><span class="w">      </span><span class="nt">ZNUNY_APACHE_DOMAIN</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">znuny.domain.tld</span>
 </span><span class="hll"><span class="w">      </span><span class="nt">ZNUNY_APACHE_REWRITE_RULES</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|-</span>
-</span><span class="hll"><span class="w">        </span><span class="no">RewriteRule ^/$ https://%{HTTP_HOST}/otrs/customer.pl</span>
-</span><span class="hll"><span class="w">        </span><span class="no">RewriteRule ^/otrs/$ https://%{HTTP_HOST}/otrs/customer.pl</span>
-</span><span class="hll"><span class="w">        </span><span class="no">RewriteRule ^/otrs$ https://%{HTTP_HOST}/otrs/customer.pl</span>
+</span><span class="hll"><span class="w">        </span><span class="no">RewriteRule ^/$ http://%{HTTP_HOST}/otrs/customer.pl</span>
+</span><span class="hll"><span class="w">        </span><span class="no">RewriteRule ^/otrs/$ http://%{HTTP_HOST}/otrs/customer.pl</span>
+</span><span class="hll"><span class="w">        </span><span class="no">RewriteRule ^/otrs$ http://%{HTTP_HOST}/otrs/customer.pl</span>
 </span></code></pre></div></td></tr></table></div>
 </div>
 <div class="admonition info">
@@ -1267,7 +1335,7 @@ If no domain is specified, then the Apache2 server will be configured with a "de
 value for the virtualhost's ServerNmae option.</p>
 <p>If required, you can also configure request rewriting rules directly in the virtualhost configuration.</p>
 </div>
-<h3 id="user">User</h3>
+<h3 id="local-user">Local user</h3>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">docker-compose.yaml</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -1291,7 +1359,7 @@ value for the virtualhost's ServerNmae option.</p>
 
 <span class="nt">services</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">app</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ghcr.io/fr-bez-aosc/znuny:beta-6.1.1</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ghcr.io/fr-bez-aosc/znuny:beta-6.5.8</span>
 <span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">znuny</span>
 <span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080:80</span>
@@ -1310,7 +1378,52 @@ value for the virtualhost's ServerNmae option.</p>
 <p>Local administrator user configuration only works if LDAP agent configurations are not specified.<br />
 If agent LDAP configurations are defined, those of the local administrator user become obsolete.</p>
 </div>
-<h3 id="customers">Customers</h3>
+<h3 id="addons">Addons</h3>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">docker-compose.yaml</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nn">---</span>
+<span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3&quot;</span>
+
+<span class="nt">services</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">app</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ghcr.io/fr-bez-aosc/znuny:beta-6.5.8</span>
+<span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">znuny</span>
+<span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080:80</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">ZNUNY_DATABASE_HOST</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">db</span>
+<span class="w">      </span><span class="nt">ZNUNY_DATABASE_PORT</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5432</span>
+<span class="w">      </span><span class="nt">ZNUNY_DATABASE_NAME</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">znuny</span>
+<span class="w">      </span><span class="nt">ZNUNY_DATABASE_USER</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">znuny</span>
+<span class="w">      </span><span class="nt">ZNUNY_DATABASE_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">password</span>
+<span class="hll"><span class="w">      </span><span class="nt">ZNUNY_ADDONS</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://download.znuny.org/releases/packages:Survey,https://addons.znuny.com/public:Znuny-HealthStatus</span>
+</span></code></pre></div></td></tr></table></div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+</div>
+<p>Extensions must be formatted with the repository as well as their name. The <code>ZNUNY_ADDONS</code> variable supports a comma-separated list.  </p>
+<p>The example above supports the following extensions :  </p>
+<ul>
+<li>https://download.znuny.org/releases/packages:Survey</li>
+<li>https://addons.znuny.com/public:Znuny-HealthStatus</li>
+</ul>
+<h3 id="authentications">Authentications</h3>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">docker-compose.yaml</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -1348,13 +1461,12 @@ If agent LDAP configurations are defined, those of the local administrator user 
 <span class="normal">33</span>
 <span class="normal">34</span>
 <span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nn">---</span>
+<span class="normal">36</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nn">---</span>
 <span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3&quot;</span>
 
 <span class="nt">services</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">app</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ghcr.io/fr-bez-aosc/znuny:beta-6.1.1</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ghcr.io/fr-bez-aosc/znuny:beta-6.5.8</span>
 <span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">znuny</span>
 <span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080:80</span>
@@ -1364,134 +1476,57 @@ If agent LDAP configurations are defined, those of the local administrator user 
 <span class="w">      </span><span class="nt">ZNUNY_DATABASE_NAME</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">znuny</span>
 <span class="w">      </span><span class="nt">ZNUNY_DATABASE_USER</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">znuny</span>
 <span class="w">      </span><span class="nt">ZNUNY_DATABASE_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">password</span>
-<span class="hll"><span class="w">      </span><span class="nt">ZNUNY_CUSTOMER_BACKEND_1</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|-</span>
-</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{AuthModule} = &#39;Kernel::System::Auth::LDAP&#39;;</span>
-</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthModule::LDAP::Host&#39;} = &#39;ldap.example.com&#39;;</span>
-</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthModule::LDAP::BaseDN&#39;} = &#39;dc=example,dc=com&#39;;</span>
-</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthModule::LDAP::UID&#39;} = &#39;uid&#39;;</span>
-</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthModule::LDAP::GroupDN&#39;} = &#39;cn=znuny-allow,ou=posixGroups,dc=example,dc=com&#39;;</span>
-</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthModule::LDAP::AccessAttr&#39;} = &#39;memberUid&#39;;</span>
-</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthModule::LDAP::UserAttr&#39;} = &#39;UID&#39;;</span>
-</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthModule::LDAP::UserAttr&#39;} = &#39;DN&#39;;</span>
-</span><span class="hll"><span class="w">      </span><span class="nt">ZNUNY_CUSTOMER_SYNCHRO_1</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|-</span>
-</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule&#39;} = &#39;Kernel::System::Auth::Sync::LDAP&#39;;</span>
-</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule::LDAP::Host&#39;} = &#39;ldap.example.com&#39;;</span>
-</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule::LDAP::BaseDN&#39;} = &#39;dc=example,dc=com&#39;;</span>
-</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule::LDAP::UID&#39;} = &#39;uid&#39;;</span>
-</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule::LDAP::SearchUserDN&#39;} = &#39;&#39;;</span>
-</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule::LDAP::SearchUserPw&#39;} = &#39;&#39;;</span>
-</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule::LDAP::AlwaysFilter&#39;} = &#39;&#39;;</span>
-</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule::LDAP::UserSyncMap&#39;} = {</span>
-</span><span class="hll"><span class="w">            </span><span class="no">UserFirstname =&gt; &#39;givenName&#39;,</span>
-</span><span class="hll"><span class="w">            </span><span class="no">UserLastname  =&gt; &#39;sn&#39;,</span>
-</span><span class="hll"><span class="w">            </span><span class="no">UserEmail     =&gt; &#39;mail&#39;,</span>
-</span><span class="hll"><span class="w">        </span><span class="no">};</span>
+<span class="hll"><span class="w">      </span><span class="nt">ZNUNY_AUTHENTICATIONS_BACKENDS</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|-</span>
+</span><span class="hll"><span class="w">        </span><span class="no">$Self-&gt;{CustomerUser1} = {</span>
+</span><span class="hll"><span class="w">          </span><span class="no">Name =&gt; &#39;LDAP Data Source&#39;,</span>
+</span><span class="hll"><span class="w">          </span><span class="no">Module =&gt; &#39;Kernel::System::CustomerUser::LDAP&#39;,</span>
+</span><span class="hll"><span class="w">          </span><span class="no">Params =&gt; {</span>
+</span><span class="hll"><span class="w">            </span><span class="no">Host =&gt; &#39;ldaps://openldap.default.svc.cluster.local&#39;,</span>
+</span><span class="hll"><span class="w">            </span><span class="no">BaseDN =&gt; &#39;o=client,ou=People,dc=domain,dc=tld&#39;,</span>
+</span><span class="hll"><span class="w">            </span><span class="no">SSCOPE =&gt; &#39;sub&#39;,</span>
+</span><span class="hll"><span class="w">            </span><span class="no">UserDN =&gt; &#39;cn=znuny,ou=applications,dc=domain,dc=tld&#39;,</span>
+</span><span class="hll"><span class="w">              </span><span class="no">UserPw =&gt; &#39;password&#39;,</span>
+</span><span class="hll"><span class="w">              </span><span class="no">DestCharset =&gt; &#39;utf-8&#39;,</span>
+</span><span class="hll"><span class="w">              </span><span class="no">SourceCharset =&gt; &#39;utf-8&#39;,</span>
+</span><span class="hll"><span class="w">              </span><span class="no">AlwaysFilter =&gt; &#39;&#39;,</span>
+</span><span class="hll"><span class="w">              </span><span class="no">Params =&gt; {</span>
+</span><span class="hll"><span class="w">                  </span><span class="no">port =&gt; 686,</span>
+</span><span class="hll"><span class="w">                  </span><span class="no">timeout =&gt; 120,</span>
+</span><span class="hll"><span class="w">                  </span><span class="no">async =&gt; 0,</span>
+</span><span class="hll"><span class="w">                  </span><span class="no">version =&gt; 3,</span>
+</span><span class="hll"><span class="w">              </span><span class="no">},</span>
+</span><span class="hll"><span class="w">        </span><span class="no">},</span>
+</span><span class="hll"><span class="w">        </span><span class="no">(...)</span>
 </span></code></pre></div></td></tr></table></div>
 </div>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>This step is almost mandatory to keep user management simple and efficient.</p>
-<p>Environment variables ending in <code>_X</code> are repeatable variables and are therefore suffixed with a number.<br />
-The <code>X</code> character must be replaced by a number between 1 and 9, allowing multiple LDAP connection backends to be configured.</p>
-<p>Use of any other number will be ignored.</p>
-</div>
-<h3 id="agents">Agents</h3>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">docker-compose.yaml</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nn">---</span>
-<span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3&quot;</span>
 
-<span class="nt">services</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">app</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ghcr.io/fr-bez-aosc/znuny:beta-6.1.1</span>
-<span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">znuny</span>
-<span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080:80</span>
-<span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">ZNUNY_DATABASE_HOST</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">db</span>
-<span class="w">      </span><span class="nt">ZNUNY_DATABASE_PORT</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5432</span>
-<span class="w">      </span><span class="nt">ZNUNY_DATABASE_NAME</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">znuny</span>
-<span class="w">      </span><span class="nt">ZNUNY_DATABASE_USER</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">znuny</span>
-<span class="w">      </span><span class="nt">ZNUNY_DATABASE_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">password</span>
-<span class="hll"><span class="w">      </span><span class="nt">ZNUNY_AGENT_BACKEND_1</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|-</span>
-</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{AuthModule} = &#39;Kernel::System::Auth::LDAP&#39;;</span>
-</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthModule::LDAP::Host&#39;} = &#39;ldap.example.com&#39;;</span>
-</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthModule::LDAP::BaseDN&#39;} = &#39;dc=example,dc=com&#39;;</span>
-</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthModule::LDAP::UID&#39;} = &#39;uid&#39;;</span>
-</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthModule::LDAP::GroupDN&#39;} = &#39;cn=znuny-allow,ou=posixGroups,dc=example,dc=com&#39;;</span>
-</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthModule::LDAP::AccessAttr&#39;} = &#39;memberUid&#39;;</span>
-</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthModule::LDAP::UserAttr&#39;} = &#39;UID&#39;;</span>
-</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthModule::LDAP::UserAttr&#39;} = &#39;DN&#39;;</span>
-</span><span class="hll"><span class="w">      </span><span class="nt">ZNUNY_AGENT_SYNCHRO_1</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|-</span>
-</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule&#39;} = &#39;Kernel::System::Auth::Sync::LDAP&#39;;</span>
-</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule::LDAP::Host&#39;} = &#39;ldap.example.com&#39;;</span>
-</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule::LDAP::BaseDN&#39;} = &#39;dc=example,dc=com&#39;;</span>
-</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule::LDAP::UID&#39;} = &#39;uid&#39;;</span>
-</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule::LDAP::SearchUserDN&#39;} = &#39;&#39;;</span>
-</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule::LDAP::SearchUserPw&#39;} = &#39;&#39;;</span>
-</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule::LDAP::AlwaysFilter&#39;} = &#39;&#39;;</span>
-</span><span class="hll"><span class="w">        </span><span class="no">$$Self-&gt;{&#39;AuthSyncModule::LDAP::UserSyncMap&#39;} = {</span>
-</span><span class="hll"><span class="w">            </span><span class="no">UserFirstname =&gt; &#39;givenName&#39;,</span>
-</span><span class="hll"><span class="w">            </span><span class="no">UserLastname  =&gt; &#39;sn&#39;,</span>
-</span><span class="hll"><span class="w">            </span><span class="no">UserEmail     =&gt; &#39;mail&#39;,</span>
-</span><span class="hll"><span class="w">        </span><span class="no">};</span>
-</span></code></pre></div></td></tr></table></div>
-</div>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>This step is almost mandatory to keep operator management simple and efficient.</p>
-<p>LDAP configuration for agents disables local users.</p>
-<p>Environment variables ending in <code>_X</code> are repeatable variables and are therefore suffixed with a number.<br />
-The <code>X</code> character must be replaced by a number between 1 and 9, allowing multiple LDAP connection backends to be configured.</p>
-<p>Use of any other number will be ignored.</p>
-</div>
 
-  <hr>
-<div class="md-source-file">
-  <small>
+
+
+
+
+
+  
     
-      Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 14, 2024</span>
+  
+  
+
+
+  <aside class="md-source-file">
+    
       
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 26, 2024</span>
+  </span>
+
     
-  </small>
-</div>
+    
+    
+    
+  </aside>
 
 
 
@@ -1502,6 +1537,7 @@ The <code>X</code> character must be replaced by a number between 1 and 9, allow
             </div>
           
           
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
@@ -1540,7 +1576,7 @@ The <code>X</code> character must be replaced by a number between 1 and 9, allow
       
     
     <a href="https://doc.znuny.org/znuny_lts" target="_blank" rel="noopener" title="doc.znuny.org" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M528.3 46.5H388.5c-48.1 0-89.9 33.3-100.4 80.3-10.6-47-52.3-80.3-100.4-80.3H48c-26.5 0-48 21.5-48 48v245.8c0 26.5 21.5 48 48 48h89.7c102.2 0 132.7 24.4 147.3 75 .7 2.8 5.2 2.8 6 0 14.7-50.6 45.2-75 147.3-75H528c26.5 0 48-21.5 48-48V94.6c0-26.4-21.3-47.9-47.7-48.1zM242 311.9c0 1.9-1.5 3.5-3.5 3.5H78.2c-1.9 0-3.5-1.5-3.5-3.5V289c0-1.9 1.5-3.5 3.5-3.5h160.4c1.9 0 3.5 1.5 3.5 3.5v22.9zm0-60.9c0 1.9-1.5 3.5-3.5 3.5H78.2c-1.9 0-3.5-1.5-3.5-3.5v-22.9c0-1.9 1.5-3.5 3.5-3.5h160.4c1.9 0 3.5 1.5 3.5 3.5V251zm0-60.9c0 1.9-1.5 3.5-3.5 3.5H78.2c-1.9 0-3.5-1.5-3.5-3.5v-22.9c0-1.9 1.5-3.5 3.5-3.5h160.4c1.9 0 3.5 1.5 3.5 3.5v22.9zm259.3 121.7c0 1.9-1.5 3.5-3.5 3.5H337.5c-1.9 0-3.5-1.5-3.5-3.5v-22.9c0-1.9 1.5-3.5 3.5-3.5h160.4c1.9 0 3.5 1.5 3.5 3.5v22.9zm0-60.9c0 1.9-1.5 3.5-3.5 3.5H337.5c-1.9 0-3.5-1.5-3.5-3.5V228c0-1.9 1.5-3.5 3.5-3.5h160.4c1.9 0 3.5 1.5 3.5 3.5v22.9zm0-60.9c0 1.9-1.5 3.5-3.5 3.5H337.5c-1.9 0-3.5-1.5-3.5-3.5v-22.8c0-1.9 1.5-3.5 3.5-3.5h160.4c1.9 0 3.5 1.5 3.5 3.5V190z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M528.3 46.5H388.5c-48.1 0-89.9 33.3-100.4 80.3-10.6-47-52.3-80.3-100.4-80.3H48c-26.5 0-48 21.5-48 48v245.8c0 26.5 21.5 48 48 48h89.7c102.2 0 132.7 24.4 147.3 75 .7 2.8 5.2 2.8 6 0 14.7-50.6 45.2-75 147.3-75H528c26.5 0 48-21.5 48-48V94.6c0-26.4-21.3-47.9-47.7-48.1zM242 311.9c0 1.9-1.5 3.5-3.5 3.5H78.2c-1.9 0-3.5-1.5-3.5-3.5V289c0-1.9 1.5-3.5 3.5-3.5h160.4c1.9 0 3.5 1.5 3.5 3.5v22.9zm0-60.9c0 1.9-1.5 3.5-3.5 3.5H78.2c-1.9 0-3.5-1.5-3.5-3.5v-22.9c0-1.9 1.5-3.5 3.5-3.5h160.4c1.9 0 3.5 1.5 3.5 3.5V251zm0-60.9c0 1.9-1.5 3.5-3.5 3.5H78.2c-1.9 0-3.5-1.5-3.5-3.5v-22.9c0-1.9 1.5-3.5 3.5-3.5h160.4c1.9 0 3.5 1.5 3.5 3.5v22.9zm259.3 121.7c0 1.9-1.5 3.5-3.5 3.5H337.5c-1.9 0-3.5-1.5-3.5-3.5v-22.9c0-1.9 1.5-3.5 3.5-3.5h160.4c1.9 0 3.5 1.5 3.5 3.5v22.9zm0-60.9c0 1.9-1.5 3.5-3.5 3.5H337.5c-1.9 0-3.5-1.5-3.5-3.5V228c0-1.9 1.5-3.5 3.5-3.5h160.4c1.9 0 3.5 1.5 3.5 3.5v22.9zm0-60.9c0 1.9-1.5 3.5-3.5 3.5H337.5c-1.9 0-3.5-1.5-3.5-3.5v-22.8c0-1.9 1.5-3.5 3.5-3.5h160.4c1.9 0 3.5 1.5 3.5 3.5V190z"/></svg>
     </a>
   
     
@@ -1551,7 +1587,7 @@ The <code>X</code> character must be replaced by a number between 1 and 9, allow
       
     
     <a href="https://github.com/FR-BEZ-AOSC" target="_blank" rel="noopener" title="github.com" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
     </a>
   
     
@@ -1562,7 +1598,7 @@ The <code>X</code> character must be replaced by a number between 1 and 9, allow
       
     
     <a href="https://github.com/FR-BEZ-AOSC/docker-znuny/pkgs/container/znuny" target="_blank" rel="noopener" title="github.com" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M349.9 236.3h-66.1v-59.4h66.1v59.4zm0-204.3h-66.1v60.7h66.1V32zm78.2 144.8H362v59.4h66.1v-59.4zm-156.3-72.1h-66.1v60.1h66.1v-60.1zm78.1 0h-66.1v60.1h66.1v-60.1zm276.8 100c-14.4-9.7-47.6-13.2-73.1-8.4-3.3-24-16.7-44.9-41.1-63.7l-14-9.3-9.3 14c-18.4 27.8-23.4 73.6-3.7 103.8-8.7 4.7-25.8 11.1-48.4 10.7H2.4c-8.7 50.8 5.8 116.8 44 162.1 37.1 43.9 92.7 66.2 165.4 66.2 157.4 0 273.9-72.5 328.4-204.2 21.4.4 67.6.1 91.3-45.2 1.5-2.5 6.6-13.2 8.5-17.1l-13.3-8.9zm-511.1-27.9h-66v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1v-59.4zm-78.1-72.1h-66.1v60.1h66.1v-60.1z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M349.9 236.3h-66.1v-59.4h66.1v59.4zm0-204.3h-66.1v60.7h66.1V32zm78.2 144.8H362v59.4h66.1v-59.4zm-156.3-72.1h-66.1v60.1h66.1v-60.1zm78.1 0h-66.1v60.1h66.1v-60.1zm276.8 100c-14.4-9.7-47.6-13.2-73.1-8.4-3.3-24-16.7-44.9-41.1-63.7l-14-9.3-9.3 14c-18.4 27.8-23.4 73.6-3.7 103.8-8.7 4.7-25.8 11.1-48.4 10.7H2.4c-8.7 50.8 5.8 116.8 44 162.1 37.1 43.9 92.7 66.2 165.4 66.2 157.4 0 273.9-72.5 328.4-204.2 21.4.4 67.6.1 91.3-45.2 1.5-2.5 6.6-13.2 8.5-17.1l-13.3-8.9zm-511.1-27.9h-66v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1v-59.4zm-78.1-72.1h-66.1v60.1h66.1v-60.1z"/></svg>
     </a>
   
 </div>
@@ -1577,10 +1613,10 @@ The <code>X</code> character must be replaced by a number between 1 and 9, allow
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.tracking", "navigation.top", "content.code.copy", "toc.follow", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.tracking", "navigation.top", "content.code.copy", "toc.follow", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.aecac24b.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.af256bd8.min.js"></script>
       
     
   </body>
