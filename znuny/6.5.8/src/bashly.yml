@@ -1,6 +1,6 @@
 name: zcli
 help: Simple cli to manage Znuny's applicative container
-version: 6.5.7
+version: 6.5.8
 
 environment_variables:
   - name: ZNUNY_TIMEZONE
