@@ -1,7 +1,7 @@
 ARG ZNUNY_VERSION=6.5.9
 ARG ZNUNY_CHECKSUM=6c911c3856b0b04db4eab80f1ab02a94
 
-FROM ruby:alpine AS builder
+FROM docker.io/ruby:alpine AS builder
 
 ARG ZNUNY_VERSION
 
