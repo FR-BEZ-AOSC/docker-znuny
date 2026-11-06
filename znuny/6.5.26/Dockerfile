@@ -13,7 +13,7 @@ WORKDIR /tmp/
 
 RUN bashly generate --env production
 
-FROM debian:stable-slim
+FROM debian:bookworm-slim
 
 ARG ZNUNY_VERSION
 ARG ZNUNY_CHECKSUM
