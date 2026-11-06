@@ -54,7 +54,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
-          file: ./znuny/Dockerfile
+          file: ./znuny/${{ github.ref_name }}/Dockerfile
           push: true
           tags: |
             ${{ env.REGISTRY }}/${{ env.ORGANIZATION }}/${{ env.IMAGE_NAME }}:${{ env.GIT_TAG }}-${{ env.RELEASE }}
@@ -67,7 +67,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
-          file: ./znuny/Dockerfile
+          file: ./znuny/${{ github.ref_name }}/Dockerfile
           push: true
           tags: |
             ${{ env.REGISTRY }}/${{ env.ORGANIZATION }}/${{ env.IMAGE_NAME }}:latest

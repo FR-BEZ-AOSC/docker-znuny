@@ -48,7 +48,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
-          file: ./znuny/${{ env.GIT_BRANCH }}/Dockerfile
+          file: ./znuny/${{ github.ref_name }}/Dockerfile
           push: true
           tags: |
             ${{ env.REGISTRY }}/${{ env.ORGANIZATION }}/${{ env.IMAGE_NAME }}:beta-${{ env.GIT_BRANCH }}
