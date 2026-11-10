@@ -13,7 +13,8 @@ KeepAliveTimeout 5
 User \${APACHE_RUN_USER}
 Group \${APACHE_RUN_GROUP}
 HostnameLookups Off
-ErrorLog \${APACHE_LOG_DIR}/error.log
+#ErrorLog \${APACHE_LOG_DIR}/error.log
+ErrorLog /dev/stdout
 LogLevel info
 IncludeOptional mods-enabled/*.load
 IncludeOptional mods-enabled/*.conf
